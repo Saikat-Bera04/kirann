@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-portrait",
+      "description": "A stylish, tech-themed portrait placeholder",
+      "imageUrl": "https://picsum.photos/seed/synth-portrait/600/800",
+      "imageHint": "tech portrait"
+    },
+    {
+      "id": "project-ecommerce",
+      "description": "Vibrant e-commerce interface mockup",
+      "imageUrl": "https://picsum.photos/seed/ecommerce-synth/800/600",
+      "imageHint": "ecommerce interface"
+    },
+    {
+      "id": "project-analytics",
+      "description": "Sleek data analytics dashboard",
+      "imageUrl": "https://picsum.photos/seed/analytics-synth/800/600",
+      "imageHint": "dashboard analytics"
+    },
+    {
+      "id": "project-task-manager",
+      "description": "Minimalist task management app",
+      "imageUrl": "https://picsum.photos/seed/tasks-synth/800/600",
+      "imageHint": "app interface"
+    }
+  ]
+}
