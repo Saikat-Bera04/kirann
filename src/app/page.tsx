@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
-import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Music, Sparkles } from "lucide-react";
+import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Map, Sparkles } from "lucide-react";
 
 function Clock() {
   const [time, setTime] = useState<Date | null>(null);
@@ -106,7 +106,6 @@ export default function Home() {
                 <div>
                   <h2 className="text-3xl font-black italic tracking-tighter text-white">TECH STACK</h2>
                 </div>
-                <div className="text-muted-foreground font-code text-xl">{"{ }"}</div>
               </div>
 
               <div className="space-y-6">
