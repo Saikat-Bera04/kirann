@@ -43,7 +43,7 @@ export default function ProjectsPage() {
         {filteredProjects.map((project) => {
           const projectImage = PlaceHolderImages.find(img => img.id === project.image)!;
           return (
-            <Card key={project.id} className="group bg-card/50 border-border overflow-hidden hover:border-primary/50 transition-all">
+            <Card key={project.id} className="group bg-card/50 border-border overflow-hidden hover:border-primary/50 transition-all rounded-none">
               <div className="aspect-[4/3] overflow-hidden relative">
                 <Image 
                   src={projectImage.imageUrl}
