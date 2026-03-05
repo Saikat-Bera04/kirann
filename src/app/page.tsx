@@ -1,9 +1,8 @@
-
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Github, Twitter, Linkedin, MapPin, ArrowUpRight } from "lucide-react";
@@ -29,6 +28,37 @@ function Clock() {
   );
 }
 
+function FloatingBackground() {
+  const particles = useMemo(() => {
+    return Array.from({ length: 30 }).map((_, i) => ({
+      id: i,
+      size: Math.random() * 4 + 2,
+      left: Math.random() * 100,
+      duration: Math.random() * 10 + 10,
+      delay: Math.random() * 10,
+    }));
+  }, []);
+
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      {particles.map((p) => (
+        <div
+          key={p.id}
+          className="particle"
+          style={{
+            width: `${p.size}px`,
+            height: `${p.size}px`,
+            left: `${p.left}%`,
+            bottom: `-20px`,
+            animationDuration: `${p.duration}s`,
+            animationDelay: `${p.delay}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function Home() {
   const avatar = PlaceHolderImages.find(img => img.id === "profile-pic")!;
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
@@ -37,7 +67,8 @@ export default function Home() {
   const rustLogo = PlaceHolderImages.find(img => img.id === "rust-logo")!;
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-hidden">
+      <FloatingBackground />
       <div className="container mx-auto px-4 pb-4 pt-[10px] max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
@@ -53,7 +84,7 @@ export default function Home() {
                   <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Iceberg', cursive" }}>{bioData.name}</h1>
                   <a 
                     href={`mailto:${bioData.email}`} 
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors block"
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors block underline decoration-primary/30 underline-offset-4"
                   >
                     {bioData.email}
                   </a>
@@ -109,7 +140,7 @@ export default function Home() {
             <div className="p-8 h-full space-y-8 border border-white/10 rounded-[2.5rem]">
               <div className="flex items-center justify-between bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 shadow-xl">
                 <div>
-                  <h2 className="text-3xl font-black italic tracking-tighter text-white" style={{ fontFamily: "'Open Sans', sans-serif" }}>TECH STACK</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter text-white uppercase" style={{ fontFamily: "'Open Sans', sans-serif" }}>TECH STACK</h2>
                 </div>
               </div>
 

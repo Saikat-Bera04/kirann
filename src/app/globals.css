@@ -48,3 +48,26 @@
 .tech-badge {
   @apply bg-white/5 border border-white/10 text-white/80 px-3 py-1 rounded-full text-xs hover:bg-white/10 transition-colors;
 }
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+.particle {
+  @apply absolute rounded-full bg-primary pointer-events-none;
+  box-shadow: 0 0 10px hsl(var(--primary));
+  animation: float-particle linear infinite;
+}
