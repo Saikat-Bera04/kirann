@@ -8,20 +8,23 @@ import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Music } from "lucide-react";
 
 function Clock() {
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState<Date | null>(null);
 
   useEffect(() => {
+    // Set initial time on mount
+    setTime(new Date());
+    // Update every second
     const timer = setInterval(() => setTime(new Date()), 1000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="text-right">
+    <div className="text-right min-w-[100px]">
       <div className="text-2xl font-bold tracking-tighter">
-        {time.toLocaleTimeString([], { hour12: false })}
+        {time ? time.toLocaleTimeString([], { hour12: false }) : "--:--:--"}
       </div>
       <div className="text-xs text-muted-foreground uppercase tracking-widest font-medium">
-        {time.toLocaleDateString([], { weekday: 'long' })}
+        {time ? time.toLocaleDateString([], { weekday: 'long' }) : "..."}
       </div>
     </div>
   );
@@ -45,7 +48,7 @@ export default function Home() {
             <div className="glass-card p-8 space-y-6">
               <div className="flex items-center gap-4">
                 <div className="relative w-20 h-20 rounded-3xl overflow-hidden border border-white/20">
-                  <Image src={avatar.imageUrl} alt={bioData.name} fill className="object-cover" />
+                  <Image src={avatar.imageUrl} alt={bioData.name} fill className="object-cover" data-ai-hint={avatar.imageHint} />
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold tracking-tight">{bioData.name}</h1>
@@ -54,7 +57,7 @@ export default function Home() {
               </div>
               
               <div className="space-y-4">
-                <div className="flex items-center gap-2 text-xs text-red-400 font-medium">
+                <div className="flex items-center gap-2 text-xs text-primary font-medium">
                   <MapPin className="w-3 h-3" />
                   {bioData.location}
                 </div>
@@ -75,21 +78,21 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Spiderman Image */}
+            {/* Feature Image 1 */}
             <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/3]">
               <div className="absolute top-4 left-4 z-10 p-2 bg-black/40 backdrop-blur-md rounded-xl border border-white/20">
-                <Image src={rustLogo.imageUrl} alt="Rust" width={24} height={24} className="rounded" />
-                <p className="text-[10px] font-bold mt-1 text-center">Rust</p>
+                <Image src={rustLogo.imageUrl} alt="Rust" width={24} height={24} className="rounded" data-ai-hint={rustLogo.imageHint} />
+                <p className="text-[10px] font-bold mt-1 text-center text-white">Rust</p>
               </div>
-              <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={spidermanImg.imageHint} />
             </div>
 
-            {/* Zenitsu Image */}
+            {/* Feature Image 2 */}
             <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/3]">
-              <Image src={animeImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src={animeImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={animeImg.imageHint} />
               <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 px-3 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/20">
                 <Music className="w-3 h-3 text-green-400" />
-                <p className="text-[10px] font-bold">Now Playing</p>
+                <p className="text-[10px] font-bold text-white">Now Playing</p>
               </div>
             </div>
           </div>
@@ -99,16 +102,16 @@ export default function Home() {
             <div className="glass-card p-8 h-full space-y-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-3xl font-black italic tracking-tighter">TECH</h2>
-                  <h2 className="text-3xl font-black italic tracking-tighter -mt-2">STACK</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter text-white">TECH</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter -mt-2 text-white">STACK</h2>
                 </div>
-                <div className="text-muted-foreground">{"{ }"}</div>
+                <div className="text-muted-foreground font-code text-xl">{"{ }"}</div>
               </div>
 
               <div className="space-y-6">
                 {skillsCategories.map((category) => (
                   <div key={category.name} className="space-y-3">
-                    <h3 className="text-sm font-bold text-white/90">{category.name}</h3>
+                    <h3 className="text-sm font-bold text-white/90 uppercase tracking-widest">{category.name}</h3>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill) => (
                         <span key={skill} className="tech-badge">
@@ -122,26 +125,27 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Column 3: Projects */}
+          {/* Column 3: Projects Vertical Navigation */}
           <div className="md:col-span-3">
             <Link href="/projects" className="block h-full group">
-              <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between">
+              <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group">
                 <Image 
                   src={projectsImg.imageUrl} 
                   alt="Projects" 
                   fill 
-                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                  className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 
+                  data-ai-hint={projectsImg.imageHint}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                 
                 <div className="relative p-8 self-end">
-                   <div className="bg-white/10 backdrop-blur-md p-2 rounded-full border border-white/20 group-hover:bg-primary/50 transition-colors">
-                     <ArrowUpRight className="w-6 h-6" />
+                   <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                     <ArrowUpRight className="w-8 h-8" />
                    </div>
                 </div>
 
                 <div className="relative p-8">
-                  <h2 className="text-6xl font-black tracking-tighter vertical-text text-white/90">PROJECTS</h2>
+                  <h2 className="text-7xl font-black tracking-tighter vertical-text text-white/90 select-none group-hover:text-primary transition-colors">PROJECTS</h2>
                 </div>
               </div>
             </Link>
