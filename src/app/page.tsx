@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
-import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Music } from "lucide-react";
+import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Music, Sparkles } from "lucide-react";
 
 function Clock() {
   const [time, setTime] = useState<Date | null>(null);
@@ -85,14 +85,18 @@ export default function Home() {
               <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={spidermanImg.imageHint} />
             </div>
 
-            {/* Feature Image 2 */}
-            <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/3]">
-              <Image src={animeImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={animeImg.imageHint} />
-              <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 px-3 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/20">
-                <Music className="w-3 h-3 text-green-400" />
-                <p className="text-[10px] font-bold text-white">Now Playing</p>
+            {/* Feature Image 2: Graphics Card Link */}
+            <Link href="/graphics" className="block relative group overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/3]">
+              <Image src={animeImg.imageUrl} alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={animeImg.imageHint} />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
+              <div className="absolute inset-0 flex flex-col items-center justify-center space-y-2">
+                <Sparkles className="w-8 h-8 text-primary opacity-80 group-hover:scale-110 transition-transform" />
+                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 transition-opacity">GRAPHICS</h2>
               </div>
-            </div>
+              <div className="absolute bottom-4 right-4 z-10 w-8 h-8 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </Link>
           </div>
 
           {/* Column 2: Tech Stack */}

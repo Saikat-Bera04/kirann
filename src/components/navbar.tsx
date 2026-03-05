@@ -8,7 +8,6 @@ import { Terminal } from "lucide-react";
 export function Navbar() {
   const pathname = usePathname();
 
-  // On the home page, we might want a more integrated look, but keeping it simple
   return (
     <nav className="fixed top-0 z-50 w-full px-4 pt-6 pointer-events-none">
       <div className="container mx-auto max-w-7xl flex items-center justify-between pointer-events-auto">
@@ -25,6 +24,7 @@ export function Navbar() {
           {[
             { name: "home", href: "/" },
             { name: "projects", href: "/projects" },
+            { name: "graphics", href: "/graphics" },
             { name: "contact", href: "/contact" },
           ].map((item) => (
             <Link

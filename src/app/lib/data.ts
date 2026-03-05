@@ -42,11 +42,34 @@ export const skillsCategories = [
 
 export const projectsData = [
   {
-    id: "projects-cover",
-    title: "PROJECTS",
-    description: "Featured Work",
+    id: "project-1",
+    title: "AI Agent Orchestrator",
+    description: "Multi-agent system for automated research and content generation.",
+    longDescription: "A comprehensive platform that leverages LLMs to orchestrate complex tasks across multiple AI agents. It features a real-time monitoring dashboard and a flexible plugin architecture.",
     image: "projects-cover",
-    tags: ["Full Stack", "AI"],
-    year: "2025"
+    tags: ["GenAI", "Node.js", "React"],
+    year: "2025",
+    repoUrl: "https://github.com/saikat",
+    liveUrl: "https://example.com"
+  },
+  {
+    id: "project-2",
+    title: "Rust Task Queue",
+    description: "High-performance distributed task queue built with Rust and Redis.",
+    longDescription: "A low-latency task processing engine designed for massive scale. Uses Redis for state management and Rust's async runtime for maximum throughput.",
+    image: "rust-logo",
+    tags: ["Rust", "Redis", "Distributed Systems"],
+    year: "2024",
+    repoUrl: "https://github.com/saikat",
+    liveUrl: "https://example.com"
   }
+];
+
+export const graphicsData = [
+  { id: "g1", title: "Cyberpunk City", url: "https://picsum.photos/seed/cyber-city/800/600", hint: "cyberpunk city" },
+  { id: "g2", title: "Neon Samurai", url: "https://picsum.photos/seed/neon-samurai/800/600", hint: "samurai neon" },
+  { id: "g3", title: "Vaporwave Sunset", url: "https://picsum.photos/seed/vapor-sunset/800/600", hint: "vaporwave sunset" },
+  { id: "g4", title: "Lofi Room", url: "https://picsum.photos/seed/lofi-room/800/600", hint: "lofi room" },
+  { id: "g5", title: "Synthwave Car", url: "https://picsum.photos/seed/synth-car/800/600", hint: "synthwave car" },
+  { id: "g6", title: "Retro Future", url: "https://picsum.photos/seed/retro-future/800/600", hint: "retro future" },
 ];
