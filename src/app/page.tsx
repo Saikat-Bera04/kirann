@@ -55,7 +55,7 @@ export default function Home() {
                     href={`mailto:${bioData.email}`} 
                     className="text-muted-foreground text-sm hover:text-primary transition-colors block"
                   >
-                    {bioData.handle}
+                    {bioData.email}
                   </a>
                 </div>
               </div>
@@ -152,7 +152,7 @@ export default function Home() {
                    <div className="mt-auto">
                     <h2 
                       className="text-4xl lg:text-7xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors [writing-mode:vertical-lr] rotate-180" 
-                      style={{ fontFamily: "'Iceberg', cursive" }}
+                      style={{ fontFamily: "'Open Sans', sans-serif" }}
                     >
                       PROJECTS
                     </h2>
