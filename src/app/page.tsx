@@ -151,7 +151,7 @@ export default function Home() {
                    </div>
                    <div className="mt-auto">
                     <h2 
-                      className="text-4xl lg:text-7xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors [writing-mode:vertical-lr] rotate-180" 
+                      className="text-4xl lg:text-7xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors [writing-mode:vertical-lr] rotate-180 uppercase" 
                       style={{ fontFamily: "'Open Sans', sans-serif" }}
                     >
                       PROJECTS
