@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative">
-      <div className="container mx-auto px-4 py-4 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 pb-4 pt-0 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
           {/* Column 1: Profile & Images */}
@@ -137,14 +137,15 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                 
-                <div className="relative p-8 self-end">
-                   <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                     <ArrowUpRight className="w-8 h-8" />
+                <div className="relative p-8 h-full flex flex-col justify-between">
+                   <div className="self-end">
+                      <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                        <ArrowUpRight className="w-8 h-8" />
+                      </div>
                    </div>
-                </div>
-
-                <div className="relative p-8">
-                  <h2 className="text-4xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors">PROJECTS</h2>
+                   <div className="mt-auto">
+                    <h2 className="text-4xl lg:text-7xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors [writing-mode:vertical-lr] rotate-180" style={{ fontFamily: "'Iceberg', cursive" }}>PROJECTS</h2>
+                  </div>
                 </div>
               </div>
             </Link>
