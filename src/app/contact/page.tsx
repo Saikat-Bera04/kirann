@@ -1,10 +1,10 @@
-
 "use client";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import Link from "next/link";
 import { bioData } from "@/app/lib/data";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,7 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Send, Github, Twitter, Linkedin, Loader2, MessageSquare } from "lucide-react";
+import { Mail, Send, Github, Twitter, Linkedin, Loader2, MessageSquare, ArrowLeft } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -51,6 +51,11 @@ export default function ContactPage() {
 
   return (
     <div className="container mx-auto px-4 py-20 max-w-6xl">
+      <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group">
+        <ArrowLeft className="w-4 h-4 transition-transform group-hover:translate-x-[-4px]" />
+        Back to Home
+      </Link>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div className="space-y-8">
           <div className="space-y-4">

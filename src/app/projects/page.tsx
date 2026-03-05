@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -8,7 +7,7 @@ import { projectsData } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight, Search, Code2 } from "lucide-react";
+import { ArrowUpRight, Search, Code2, ArrowLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 export default function ProjectsPage() {
@@ -21,6 +20,11 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto px-4 py-20">
+      <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12 group">
+        <ArrowLeft className="w-4 h-4 transition-transform group-hover:translate-x-[-4px]" />
+        Back to Home
+      </Link>
+
       <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
         <div className="space-y-4">
           <h1 className="text-5xl font-headline font-bold">Project <span className="text-primary">Portfolio</span></h1>

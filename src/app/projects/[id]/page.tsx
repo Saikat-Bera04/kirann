@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -6,7 +5,7 @@ import { projectsData } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Storyteller } from "@/components/portfolio/storyteller";
-import { Github, ExternalLink, ArrowLeft, Terminal } from "lucide-react";
+import { Github, ExternalLink, ArrowLeft, Terminal, Home } from "lucide-react";
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projectsData.find(p => p.id === params.id);
@@ -19,10 +18,16 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="container mx-auto px-4 py-20">
-      <Link href="/projects" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 group">
-        <ArrowLeft className="w-4 h-4 transition-transform group-hover:translate-x-[-4px]" />
-        Back to Portfolio
-      </Link>
+      <div className="flex items-center justify-between mb-8">
+        <Link href="/projects" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group">
+          <ArrowLeft className="w-4 h-4 transition-transform group-hover:translate-x-[-4px]" />
+          Back to Portfolio
+        </Link>
+        <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group">
+          <Home className="w-4 h-4" />
+          Home
+        </Link>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div className="space-y-8">
