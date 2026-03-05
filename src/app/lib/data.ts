@@ -1,15 +1,15 @@
 export const bioData = {
-  name: "Mohak Chakraborty",
-  handle: "@moChak.rs",
+  name: "Saikat Bera",
+  handle: "@saikat.dev",
   title: "Full Stack Engineer & GenAI Enthusiast",
   tagline: "Building scalable backends and genAI products.",
-  about: "Hi I am Mohak and I build scalable backends and genAI products.",
-  location: "Gurgaon",
-  email: "hello@mochak.me",
-  github: "https://github.com/mochak",
-  twitter: "https://twitter.com/mochak",
-  linkedin: "https://linkedin.com/in/mochak",
-  currentlyBuilding: "Zynvo Social",
+  about: "Hi I am Saikat and I build scalable backends and genAI products.",
+  location: "India",
+  email: "hello@saikat.me",
+  github: "https://github.com/saikat",
+  twitter: "https://twitter.com/saikat",
+  linkedin: "https://linkedin.com/in/saikat",
+  currentlyBuilding: "Personal Portfolio",
   internship: "XpectrumAI"
 };
 
@@ -45,7 +45,7 @@ export const projectsData = [
     id: "projects-cover",
     title: "PROJECTS",
     description: "Featured Work",
-    image: "project-projects-cover",
+    image: "projects-cover",
     tags: ["Full Stack", "AI"],
     year: "2025"
   }

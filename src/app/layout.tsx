@@ -4,7 +4,7 @@ import { Navbar } from '@/components/navbar';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Mohak Chakraborty | Portfolio',
+  title: 'Saikat Bera | Portfolio',
   description: 'Full Stack Engineer building scalable backends and genAI products.',
 };
 
