@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
-import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Clock as ClockIcon } from "lucide-react";
+import { Github, Twitter, Linkedin, MapPin, ArrowUpRight } from "lucide-react";
 
 function Clock() {
   const [time, setTime] = useState<Date | null>(null);
@@ -17,7 +17,7 @@ function Clock() {
   }, []);
 
   return (
-    <div className="text-right min-w-[100px]">
+    <div className="text-right min-w-[100px]" style={{ fontFamily: "'Bitcount Single', monospace" }}>
       <div className="text-2xl font-bold tracking-tighter">
         {time ? time.toLocaleTimeString([], { hour12: false }) : "--:--:--"}
       </div>
@@ -49,7 +49,7 @@ export default function Home() {
                   <Image src={avatar.imageUrl} alt={bioData.name} fill className="object-cover" data-ai-hint={avatar.imageHint} />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold tracking-tight">{bioData.name}</h1>
+                  <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Iceberg', cursive" }}>{bioData.name}</h1>
                   <p className="text-muted-foreground text-sm">{bioData.handle}</p>
                 </div>
               </div>
@@ -90,7 +90,7 @@ export default function Home() {
               <Image src={animeImg.imageUrl} alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={animeImg.imageHint} />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
               <div className="absolute bottom-8 left-8 z-10">
-                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 transition-opacity">GRAPHICS</h2>
+                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 transition-opacity" style={{ fontFamily: "'Iceberg', cursive" }}>GRAPHICS</h2>
               </div>
               <div className="absolute bottom-4 right-4 z-10 w-8 h-8 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                 <ArrowUpRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ export default function Home() {
             <div className="p-8 h-full space-y-8 border border-white/10 rounded-[2.5rem]">
               <div className="flex items-center justify-between bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 shadow-xl">
                 <div>
-                  <h2 className="text-3xl font-black italic tracking-tighter text-white">TECH STACK</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter text-white" style={{ fontFamily: "'Iceberg', cursive" }}>TECH STACK</h2>
                 </div>
               </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative p-8">
-                  <h2 className="text-7xl font-black tracking-tighter vertical-text text-white/90 select-none group-hover:text-primary transition-colors">PROJECTS</h2>
+                  <h2 className="text-7xl font-black tracking-tighter vertical-text text-white/90 select-none group-hover:text-primary transition-colors" style={{ fontFamily: "'Iceberg', cursive" }}>PROJECTS</h2>
                 </div>
               </div>
             </Link>
