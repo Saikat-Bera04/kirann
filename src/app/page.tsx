@@ -97,7 +97,7 @@ export default function Home() {
 
           {/* Column 2: Tech Stack */}
           <div className="md:col-span-5">
-            <div className="glass-card p-8 h-full space-y-8">
+            <div className="p-8 h-full space-y-8 border border-white/10 rounded-[2.5rem]">
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-3xl font-black italic tracking-tighter text-white">TECH</h2>
