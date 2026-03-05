@@ -30,6 +30,41 @@ function Clock() {
   );
 }
 
+function Snowfall() {
+  const [snowflakes, setSnowflakes] = useState<{ id: number; left: number; delay: number; duration: number; size: number }[]>([]);
+
+  useEffect(() => {
+    // Generate snowflakes only on the client side to avoid hydration mismatch
+    const flakes = Array.from({ length: 40 }).map((_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 20,
+      duration: 10 + Math.random() * 15,
+      size: 1 + Math.random() * 3,
+    }));
+    setSnowflakes(flakes);
+  }, []);
+
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      {snowflakes.map((flake) => (
+        <div
+          key={flake.id}
+          className="absolute bg-white rounded-full animate-snow"
+          style={{
+            left: `${flake.left}%`,
+            width: `${flake.size}px`,
+            height: `${flake.size}px`,
+            animationDelay: `-${flake.delay}s`,
+            animationDuration: `${flake.duration}s`,
+            top: '-5vh',
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function Home() {
   const avatar = PlaceHolderImages.find(img => img.id === "profile-pic")!;
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
@@ -38,8 +73,9 @@ export default function Home() {
   const rustLogo = PlaceHolderImages.find(img => img.id === "rust-logo")!;
 
   return (
-    <div className="min-h-screen grid-bg">
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+    <div className="min-h-screen grid-bg relative">
+      <Snowfall />
+      <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
           {/* Column 1: Profile & Images */}
