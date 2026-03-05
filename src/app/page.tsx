@@ -98,10 +98,9 @@ export default function Home() {
           {/* Column 2: Tech Stack */}
           <div className="md:col-span-5">
             <div className="p-8 h-full space-y-8 border border-white/10 rounded-[2.5rem]">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 shadow-xl">
                 <div>
-                  <h2 className="text-3xl font-black italic tracking-tighter text-white">TECH</h2>
-                  <h2 className="text-3xl font-black italic tracking-tighter -mt-2 text-white">STACK</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter text-white">TECH STACK</h2>
                 </div>
                 <div className="text-muted-foreground font-code text-xl">{"{ }"}</div>
               </div>
