@@ -34,8 +34,11 @@
   body {
     @apply bg-background text-foreground selection:bg-primary/30 font-body antialiased;
     background-image: 
-      radial-gradient(circle at 50% 50%, rgba(14, 25, 45, 0) 0%, rgba(14, 25, 45, 0.5) 100%),
-      url('https://www.transparenttextures.com/patterns/stardust.png');
+      linear-gradient(rgba(14, 25, 45, 0.7), rgba(14, 25, 45, 0.7)),
+      url('https://i.pinimg.com/originals/f9/40/22/f94022bc6d00dad1c26cf6deda3d4aaa.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
   }
 }
@@ -52,15 +55,4 @@
   background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
-}
-
-@keyframes snow-fall {
-  0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.6; }
-  90% { opacity: 0.6; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-}
-
-.animate-snow {
-  animation: snow-fall linear infinite;
 }
