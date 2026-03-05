@@ -109,7 +109,7 @@ export default function Home() {
             <div className="p-8 h-full space-y-8 border border-white/10 rounded-[2.5rem]">
               <div className="flex items-center justify-between bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 shadow-xl">
                 <div>
-                  <h2 className="text-3xl font-black italic tracking-tighter text-white" style={{ fontFamily: "'Iceberg', cursive" }}>TECH STACK</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter text-white" style={{ fontFamily: "'Bitcount Single', monospace" }}>TECH STACK</h2>
                 </div>
               </div>
 
