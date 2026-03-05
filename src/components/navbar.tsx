@@ -1,57 +1,50 @@
-
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Zap, Terminal, Code2, Mail, LayoutGrid } from "lucide-react";
-
-const navItems = [
-  { name: "Bio", href: "/", icon: Zap },
-  { name: "Portfolio", href: "/projects", icon: LayoutGrid },
-  { name: "Contact", href: "/contact", icon: Mail },
-];
+import { Terminal } from "lucide-react";
 
 export function Navbar() {
   const pathname = usePathname();
 
+  // On the home page, we might want a more integrated look, but keeping it simple
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 z-50 w-full px-4 pt-6 pointer-events-none">
+      <div className="container mx-auto max-w-7xl flex items-center justify-between pointer-events-auto">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg bg-primary/20 border border-primary/50 flex items-center justify-center transition-all group-hover:synth-border-glow">
-            <Terminal className="text-primary w-6 h-6" />
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center transition-all group-hover:bg-white/10">
+            <Terminal className="text-white w-5 h-5" />
           </div>
-          <span className="font-headline font-bold text-xl tracking-tighter synth-glow">
-            SYNTH<span className="text-primary">FOLIO</span>
+          <span className="font-bold text-lg tracking-tighter text-white/90">
+            moChak<span className="text-primary">.rs</span>
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = pathname === item.href;
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary",
-                  isActive ? "text-primary" : "text-muted-foreground"
-                )}
-              >
-                <Icon className="w-4 h-4" />
-                {item.name}
-              </Link>
-            );
-          })}
+        <div className="hidden md:flex items-center gap-6 px-6 py-2 bg-white/5 backdrop-blur-md rounded-full border border-white/10">
+          {[
+            { name: "home", href: "/" },
+            { name: "projects", href: "/projects" },
+            { name: "contact", href: "/contact" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "text-xs font-bold uppercase tracking-widest transition-colors hover:text-primary",
+                pathname === item.href ? "text-primary" : "text-muted-foreground"
+              )}
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
         <Link 
           href="/contact"
-          className="bg-primary text-primary-foreground px-4 py-2 rounded-md text-sm font-bold transition-all hover:scale-105 active:scale-95 synth-border-glow"
+          className="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
         >
-          Hire Me
+          Let's talk
         </Link>
       </div>
     </nav>

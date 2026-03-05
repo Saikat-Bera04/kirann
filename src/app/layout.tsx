@@ -1,13 +1,11 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 import { Navbar } from '@/components/navbar';
-import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Synthwave Folio | Digital Architect',
-  description: 'Personal portfolio of a creative developer and digital architect.',
+  title: 'Mohak Chakraborty | Portfolio',
+  description: 'Full Stack Engineer building scalable backends and genAI products.',
 };
 
 export default function RootLayout({
@@ -20,14 +18,13 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased min-h-screen flex flex-col grid-background overflow-x-hidden">
+      <body className="antialiased min-h-screen selection:bg-primary/30">
         <Navbar />
-        <main className="flex-grow">
+        <main className="pt-24 pb-12">
           {children}
         </main>
-        <Footer />
         <Toaster />
       </body>
     </html>

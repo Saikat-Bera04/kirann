@@ -1,100 +1,160 @@
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { bioData } from "@/app/lib/data";
+import { useEffect, useState } from "react";
+import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
-import { SkillsMatrix } from "@/components/portfolio/skills-matrix";
-import { GithubOverview } from "@/components/portfolio/github-overview";
-import { ArrowRight, Github, Twitter, Linkedin, ExternalLink } from "lucide-react";
+import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Music } from "lucide-react";
 
-export default function Home() {
-  const portrait = PlaceHolderImages.find(img => img.id === "hero-portrait")!;
+function Clock() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <div className="container mx-auto px-4 pt-12">
-      {/* Hero Section */}
-      <section className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 min-h-[70vh] py-12">
-        <div className="flex-1 space-y-6 text-center lg:text-left">
-          <div className="inline-block px-3 py-1 bg-primary/10 border border-primary/30 rounded-full">
-            <span className="text-primary text-xs font-bold uppercase tracking-widest">Available for Hire</span>
-          </div>
-          <h1 className="text-5xl lg:text-7xl font-headline font-bold leading-tight">
-            I'm <span className="text-primary synth-glow">{bioData.name}</span>
-          </h1>
-          <div className="h-8 overflow-hidden">
-            <p className="text-xl lg:text-2xl text-muted-foreground font-medium animate-typing overflow-hidden whitespace-nowrap border-r-4 border-primary">
-              {bioData.title}
-            </p>
-          </div>
-          <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-            {bioData.about}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-            <Link 
-              href="/projects" 
-              className="group bg-primary text-primary-foreground px-8 py-4 rounded-md font-bold flex items-center gap-2 transition-all hover:scale-105 synth-border-glow"
-            >
-              View My Work
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-            <div className="flex items-center gap-4">
-              <a href={bioData.github} className="p-3 bg-card border border-border rounded-lg text-muted-foreground hover:text-primary hover:border-primary transition-all">
-                <Github className="w-6 h-6" />
-              </a>
-              <a href={bioData.linkedin} className="p-3 bg-card border border-border rounded-lg text-muted-foreground hover:text-primary hover:border-primary transition-all">
-                <Linkedin className="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="text-right">
+      <div className="text-2xl font-bold tracking-tighter">
+        {time.toLocaleTimeString([], { hour12: false })}
+      </div>
+      <div className="text-xs text-muted-foreground uppercase tracking-widest font-medium">
+        {time.toLocaleDateString([], { weekday: 'long' })}
+      </div>
+    </div>
+  );
+}
 
-        <div className="flex-1 relative max-w-md lg:max-w-none">
-          <div className="relative z-10 rounded-2xl overflow-hidden border-2 border-primary/50 synth-border-glow rotate-2 transition-transform hover:rotate-0">
-            <Image 
-              src={portrait.imageUrl} 
-              alt={portrait.description} 
-              width={500}
-              height={667}
-              data-ai-hint={portrait.imageHint}
-              className="object-cover"
-              priority
-            />
-          </div>
-          {/* Decorative Elements */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 blur-3xl rounded-full"></div>
-        </div>
-      </section>
+export default function Home() {
+  const avatar = PlaceHolderImages.find(img => img.id === "profile-pic")!;
+  const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
+  const animeImg = PlaceHolderImages.find(img => img.id === "anime-character")!;
+  const projectsImg = PlaceHolderImages.find(img => img.id === "projects-cover")!;
+  const rustLogo = PlaceHolderImages.find(img => img.id === "rust-logo")!;
 
-      {/* Skills Matrix */}
-      <SkillsMatrix />
-
-      {/* Social Hub / Call to Action */}
-      <section className="py-20 text-center">
-        <div className="bg-gradient-to-br from-primary/10 via-background to-secondary/10 rounded-3xl border border-primary/20 p-12 lg:p-24 relative overflow-hidden">
-          <div className="relative z-10 space-y-6">
-            <h2 className="text-4xl lg:text-6xl font-headline font-bold">Let's build the <span className="text-secondary">future</span> together.</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Open for freelance projects, open-source collaborations, and full-time engineering roles.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 pt-6">
-              <Link 
-                href="/contact" 
-                className="bg-foreground text-background font-bold px-10 py-4 rounded-md hover:bg-primary hover:text-foreground transition-all flex items-center gap-2"
-              >
-                Get in Touch
-                <ExternalLink className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
+  return (
+    <div className="min-h-screen grid-bg">
+      <div className="container mx-auto px-4 py-8 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
-          {/* Background grid effect for the hub */}
-          <div className="absolute inset-0 grid-background opacity-20 pointer-events-none"></div>
-        </div>
-      </section>
+          {/* Column 1: Profile & Images */}
+          <div className="md:col-span-4 space-y-6">
+            {/* Profile Card */}
+            <div className="glass-card p-8 space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="relative w-20 h-20 rounded-3xl overflow-hidden border border-white/20">
+                  <Image src={avatar.imageUrl} alt={bioData.name} fill className="object-cover" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold tracking-tight">{bioData.name}</h1>
+                  <p className="text-muted-foreground text-sm">{bioData.handle}</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 text-xs text-red-400 font-medium">
+                  <MapPin className="w-3 h-3" />
+                  {bioData.location}
+                </div>
+                <p className="text-sm font-bold leading-relaxed">{bioData.about}</p>
+                <div className="space-y-1 text-xs">
+                  <p><span className="text-muted-foreground">Currently building:</span> <span className="text-primary hover:underline cursor-pointer">{bioData.currentlyBuilding}</span></p>
+                  <p><span className="text-muted-foreground">Full Stack Intern:</span> <span className="text-primary hover:underline cursor-pointer">{bioData.internship}</span></p>
+                </div>
+              </div>
 
-      {/* GitHub Overview */}
-      <GithubOverview />
+              <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                <div className="flex gap-4">
+                  <a href={bioData.twitter} className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-white transition-all"><Twitter className="w-4 h-4" /></a>
+                  <a href={bioData.github} className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-white transition-all"><Github className="w-4 h-4" /></a>
+                  <a href={bioData.linkedin} className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-white transition-all"><Linkedin className="w-4 h-4" /></a>
+                </div>
+                <Clock />
+              </div>
+            </div>
+
+            {/* Spiderman Image */}
+            <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/3]">
+              <div className="absolute top-4 left-4 z-10 p-2 bg-black/40 backdrop-blur-md rounded-xl border border-white/20">
+                <Image src={rustLogo.imageUrl} alt="Rust" width={24} height={24} className="rounded" />
+                <p className="text-[10px] font-bold mt-1 text-center">Rust</p>
+              </div>
+              <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+            </div>
+
+            {/* Zenitsu Image */}
+            <div className="relative group overflow-hidden rounded-[2.5rem] border border-white/10 aspect-[4/3]">
+              <Image src={animeImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div className="absolute bottom-4 left-4 z-10 flex items-center gap-2 px-3 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/20">
+                <Music className="w-3 h-3 text-green-400" />
+                <p className="text-[10px] font-bold">Now Playing</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2: Tech Stack */}
+          <div className="md:col-span-5">
+            <div className="glass-card p-8 h-full space-y-8">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-3xl font-black italic tracking-tighter">TECH</h2>
+                  <h2 className="text-3xl font-black italic tracking-tighter -mt-2">STACK</h2>
+                </div>
+                <div className="text-muted-foreground">{"{ }"}</div>
+              </div>
+
+              <div className="space-y-6">
+                {skillsCategories.map((category) => (
+                  <div key={category.name} className="space-y-3">
+                    <h3 className="text-sm font-bold text-white/90">{category.name}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span key={skill} className="tech-badge">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3: Projects */}
+          <div className="md:col-span-3">
+            <Link href="/projects" className="block h-full group">
+              <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between">
+                <Image 
+                  src={projectsImg.imageUrl} 
+                  alt="Projects" 
+                  fill 
+                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent"></div>
+                
+                <div className="relative p-8 self-end">
+                   <div className="bg-white/10 backdrop-blur-md p-2 rounded-full border border-white/20 group-hover:bg-primary/50 transition-colors">
+                     <ArrowUpRight className="w-6 h-6" />
+                   </div>
+                </div>
+
+                <div className="relative p-8">
+                  <h2 className="text-6xl font-black tracking-tighter vertical-text text-white/90">PROJECTS</h2>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+        </div>
+      </div>
+      <style jsx>{`
+        .vertical-text {
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+        }
+      `}</style>
     </div>
   );
 }

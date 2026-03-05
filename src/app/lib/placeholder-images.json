@@ -1,29 +1,34 @@
-
 {
   "placeholderImages": [
     {
-      "id": "hero-portrait",
-      "description": "A stylish, tech-themed portrait placeholder",
-      "imageUrl": "https://picsum.photos/seed/synth-portrait/600/800",
-      "imageHint": "tech portrait"
+      "id": "profile-pic",
+      "description": "Avatar of Mohak",
+      "imageUrl": "https://picsum.photos/seed/mochak-avatar/200/200",
+      "imageHint": "profile avatar"
     },
     {
-      "id": "project-ecommerce",
-      "description": "Vibrant e-commerce interface mockup",
-      "imageUrl": "https://picsum.photos/seed/ecommerce-synth/800/600",
-      "imageHint": "ecommerce interface"
+      "id": "spiderman-hammock",
+      "description": "Spiderman relaxing in a hammock",
+      "imageUrl": "https://picsum.photos/seed/spiderman-relax/600/400",
+      "imageHint": "spiderman comic"
     },
     {
-      "id": "project-analytics",
-      "description": "Sleek data analytics dashboard",
-      "imageUrl": "https://picsum.photos/seed/analytics-synth/800/600",
-      "imageHint": "dashboard analytics"
+      "id": "anime-character",
+      "description": "Anime character portrait",
+      "imageUrl": "https://picsum.photos/seed/anime-portrait-zen/600/500",
+      "imageHint": "anime aesthetic"
     },
     {
-      "id": "project-task-manager",
-      "description": "Minimalist task management app",
-      "imageUrl": "https://picsum.photos/seed/tasks-synth/800/600",
-      "imageHint": "app interface"
+      "id": "projects-cover",
+      "description": "Stylish anime character vertical cover",
+      "imageUrl": "https://picsum.photos/seed/projects-spike/600/1000",
+      "imageHint": "anime character"
+    },
+    {
+      "id": "rust-logo",
+      "description": "Rust programming language logo",
+      "imageUrl": "https://picsum.photos/seed/rust-lang/100/100",
+      "imageHint": "programming logo"
     }
   ]
 }
