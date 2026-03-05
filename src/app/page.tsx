@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
-import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Map, Sparkles } from "lucide-react";
+import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Clock as ClockIcon } from "lucide-react";
 
 function Clock() {
   const [time, setTime] = useState<Date | null>(null);
@@ -36,7 +36,7 @@ export default function Home() {
   const rustLogo = PlaceHolderImages.find(img => img.id === "rust-logo")!;
 
   return (
-    <div className="min-h-screen grid-bg relative">
+    <div className="min-h-screen relative">
       <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
