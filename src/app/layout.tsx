@@ -20,7 +20,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Iceberg&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased min-h-screen selection:bg-primary/30" suppressHydrationWarning>
-        <main className="pb-12">
+        <main>
           {children}
         </main>
         <Toaster />

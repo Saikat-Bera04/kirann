@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative">
-      <div className="container mx-auto px-4 py-8 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 py-4 max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
           {/* Column 1: Profile & Images */}
@@ -144,7 +144,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative p-8">
-                  <h2 className="text-7xl font-black tracking-tighter vertical-text text-white/90 select-none group-hover:text-primary transition-colors" style={{ fontFamily: "'Iceberg', cursive" }}>PROJECTS</h2>
+                  <h2 className="text-4xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors">PROJECTS</h2>
                 </div>
               </div>
             </Link>
@@ -152,12 +152,6 @@ export default function Home() {
 
         </div>
       </div>
-      <style jsx>{`
-        .vertical-text {
-          writing-mode: vertical-rl;
-          transform: rotate(180deg);
-        }
-      `}</style>
     </div>
   );
 }

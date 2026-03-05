@@ -1,11 +1,11 @@
 export const bioData = {
   name: "Saikat Bera",
-  handle: "@saikat.dev",
+  handle: "work.saikatbera@gmail.com",
   title: "Full Stack Engineer & GenAI Enthusiast",
   tagline: "Building scalable backends and genAI products.",
   about: "Hi I am Saikat and I build scalable backends and genAI products.",
   location: "India",
-  email: "hello@saikat.me",
+  email: "work.saikatbera@gmail.com",
   github: "https://github.com/saikat",
   twitter: "https://twitter.com/saikat",
   linkedin: "https://linkedin.com/in/saikat",
