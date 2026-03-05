@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -50,7 +51,12 @@ export default function Home() {
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Iceberg', cursive" }}>{bioData.name}</h1>
-                  <p className="text-muted-foreground text-sm">{bioData.handle}</p>
+                  <a 
+                    href={`mailto:${bioData.email}`} 
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors block"
+                  >
+                    {bioData.handle}
+                  </a>
                 </div>
               </div>
               
@@ -144,7 +150,12 @@ export default function Home() {
                       </div>
                    </div>
                    <div className="mt-auto">
-                    <h2 className="text-4xl lg:text-7xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors [writing-mode:vertical-lr] rotate-180" style={{ fontFamily: "'Iceberg', cursive" }}>PROJECTS</h2>
+                    <h2 
+                      className="text-4xl lg:text-7xl font-black tracking-tighter text-white/90 select-none group-hover:text-primary transition-colors [writing-mode:vertical-lr] rotate-180" 
+                      style={{ fontFamily: "'Iceberg', cursive" }}
+                    >
+                      PROJECTS
+                    </h2>
                   </div>
                 </div>
               </div>
