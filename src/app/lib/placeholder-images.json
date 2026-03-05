@@ -27,8 +27,26 @@
     {
       "id": "rust-logo",
       "description": "Rust programming language logo",
-      "imageUrl": "https://picsum.photos/seed/rust-lang/100/100",
+      "imageUrl": "https://picsum.photos/seed/rust-lang/600/400",
       "imageHint": "programming logo"
+    },
+    {
+      "id": "web3-cover",
+      "description": "Blockchain and decentralized theme",
+      "imageUrl": "https://picsum.photos/seed/web3-tech/600/400",
+      "imageHint": "blockchain technology"
+    },
+    {
+      "id": "ai-analysis",
+      "description": "Artificial intelligence data analysis visualization",
+      "imageUrl": "https://picsum.photos/seed/ai-data/600/400",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "collab-engine",
+      "description": "Network and collaboration conceptual art",
+      "imageUrl": "https://picsum.photos/seed/collab-network/600/400",
+      "imageHint": "network connection"
     }
   ]
 }
