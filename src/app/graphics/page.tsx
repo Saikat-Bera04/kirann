@@ -24,7 +24,7 @@ export default function GraphicsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {graphicsData.map((graphic) => (
-          <div key={graphic.id} className="group relative rounded-[2rem] overflow-hidden border border-white/10 aspect-[4/3] bg-card/20 backdrop-blur-sm">
+          <div key={graphic.id} className="group relative rounded-[2.5rem] overflow-hidden border border-white/10 aspect-[4/3] bg-card/20 backdrop-blur-sm shadow-xl">
             <Image 
               src={graphic.url} 
               alt={graphic.title} 

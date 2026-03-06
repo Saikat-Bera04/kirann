@@ -93,7 +93,7 @@ export default function Home() {
             {/* Profile Card */}
             <div className="glass-card p-8 space-y-6 border-primary/20">
               <div className="flex items-center gap-4">
-                <div className="relative w-20 h-20 rounded-3xl overflow-hidden border border-primary/30">
+                <div className="relative w-20 h-20 rounded-[2.5rem] overflow-hidden border border-primary/30">
                   <Image src="/B (1).png" alt={bioData.name} fill className="object-cover" />
                 </div>
                 <div>
@@ -150,12 +150,12 @@ export default function Home() {
             </div>
 
             {/* Feature Image 1 */}
-            <div className="relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3]">
+            <div className="relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
               <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={spidermanImg.imageHint} />
             </div>
 
             {/* Feature Image 2: Graphics Card Link */}
-            <Link href="/graphics" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3]">
+            <Link href="/graphics" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
               <Image src="/Leo Messi.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
