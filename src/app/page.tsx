@@ -6,6 +6,7 @@ import { useEffect, useState, useMemo } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Layers } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 function Clock() {
   const [time, setTime] = useState<Date | null>(null);
@@ -69,9 +70,17 @@ function FloatingBackground() {
 }
 
 export default function Home() {
-  const avatar = PlaceHolderImages.find(img => img.id === "profile-pic")!;
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
-  const projectsImg = PlaceHolderImages.find(img => img.id === "projects-cover")!;
+
+  const glowStyles = [
+    "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:bg-primary/5",
+    "hover:border-purple-500 hover:text-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:bg-purple-500/5",
+    "hover:border-blue-500 hover:text-blue-400 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:bg-blue-500/5",
+    "hover:border-pink-500 hover:text-pink-400 hover:shadow-[0_0_15px_rgba(236,72,153,0.5)] hover:bg-pink-500/5",
+    "hover:border-orange-500 hover:text-orange-400 hover:shadow-[0_0_15px_rgba(249,115,22,0.5)] hover:bg-orange-500/5",
+    "hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:bg-cyan-400/5",
+    "hover:border-yellow-400 hover:text-yellow-300 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] hover:bg-yellow-400/5",
+  ];
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -173,11 +182,20 @@ export default function Home() {
                   <div key={category.name} className="space-y-3">
                     <h3 className="text-sm font-bold text-primary/90 uppercase tracking-widest">{category.name}</h3>
                     <div className="flex flex-wrap gap-2">
-                      {category.skills.map((skill) => (
-                        <span key={skill} className="tech-badge border-primary/20 hover:border-primary">
-                          {skill}
-                        </span>
-                      ))}
+                      {category.skills.map((skill, skillIdx) => {
+                        const styleClass = glowStyles[skillIdx % glowStyles.length];
+                        return (
+                          <span 
+                            key={skill} 
+                            className={cn(
+                              "tech-badge hover:scale-110",
+                              styleClass
+                            )}
+                          >
+                            {skill}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -197,7 +215,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                 
-                <div className="relative p-8 h-full flex flex-col justify-between items-start text-left">
+                <div className="relative p-8 h-full flex flex-col justify-between items-center text-center">
                    <div className="self-start">
                       <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                         <ArrowUpRight className="w-8 h-8" />
