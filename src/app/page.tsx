@@ -181,7 +181,7 @@ export default function Home() {
                 {skillsCategories.map((category) => (
                   <div key={category.name} className="space-y-4">
                     <h3 className="text-sm font-bold text-primary/90 uppercase tracking-[0.2em] border-l-2 border-primary/50 pl-3">{category.name}</h3>
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, skillIdx) => {
                         const styleClass = glowStyles[skillIdx % glowStyles.length];
                         return (
