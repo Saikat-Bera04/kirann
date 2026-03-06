@@ -9,7 +9,8 @@ export const bioData = {
   github: "https://github.com/Saikat-Bera04",
   twitter: "https://twitter.com/saikat",
   linkedin: "https://linkedin.com/in/saikat",
-  currentlyBuilding: "Personal Portfolio",
+  currentlyBuilding: "campuskart",
+  currentlyBuildingUrl: "https://www.campuskart.space/",
   internship: "Girlscript foundation",
   internshipUrl: "https://www.girlscript.org/",
   internshipTitle: "Graphics Intern"

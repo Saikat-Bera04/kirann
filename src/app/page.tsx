@@ -98,7 +98,17 @@ export default function Home() {
                 </div>
                 <p className="text-sm font-bold leading-relaxed">{bioData.about}</p>
                 <div className="space-y-1 text-xs">
-                  <p><span className="text-muted-foreground">Currently building:</span> <span className="text-primary hover:underline cursor-pointer">{bioData.currentlyBuilding}</span></p>
+                  <p>
+                    <span className="text-muted-foreground">Currently building:</span>{" "}
+                    <a 
+                      href={bioData.currentlyBuildingUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:underline decoration-primary/30 underline-offset-4 font-bold"
+                    >
+                      {bioData.currentlyBuilding}
+                    </a>
+                  </p>
                   <p>
                     <span className="text-muted-foreground">{bioData.internshipTitle}:</span>{" "}
                     <a 
