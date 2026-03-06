@@ -73,13 +73,13 @@ export default function Home() {
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
 
   const glowStyles = [
-    "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:bg-primary/5",
-    "hover:border-purple-500 hover:text-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] hover:bg-purple-500/5",
-    "hover:border-blue-500 hover:text-blue-400 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:bg-blue-500/5",
-    "hover:border-pink-500 hover:text-pink-400 hover:shadow-[0_0_15px_rgba(236,72,153,0.5)] hover:bg-pink-500/5",
-    "hover:border-orange-500 hover:text-orange-400 hover:shadow-[0_0_15px_rgba(249,115,22,0.5)] hover:bg-orange-500/5",
-    "hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:bg-cyan-400/5",
-    "hover:border-yellow-400 hover:text-yellow-300 hover:shadow-[0_0_15px_rgba(250,204,21,0.5)] hover:bg-yellow-400/5",
+    "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-primary/10",
+    "hover:border-purple-500 hover:text-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.6)] hover:bg-purple-500/10",
+    "hover:border-blue-500 hover:text-blue-400 hover:shadow-[0_0_15px_rgba(59,130,246,0.6)] hover:bg-blue-500/10",
+    "hover:border-pink-500 hover:text-pink-400 hover:shadow-[0_0_15px_rgba(236,72,153,0.6)] hover:bg-pink-500/10",
+    "hover:border-orange-500 hover:text-orange-400 hover:shadow-[0_0_15px_rgba(249,115,22,0.6)] hover:bg-orange-500/10",
+    "hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] hover:bg-cyan-400/10",
+    "hover:border-yellow-400 hover:text-yellow-300 hover:shadow-[0_0_15px_rgba(250,204,21,0.6)] hover:bg-yellow-400/10",
   ];
 
   return (
@@ -157,12 +157,12 @@ export default function Home() {
             {/* Feature Image 2: Graphics Card Link */}
             <Link href="/graphics" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3]">
               <Image src="/Leo Messi.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
-                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:synth-glow transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>GRAPHICS</h2>
+                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>GRAPHICS</h2>
               </div>
-              <div className="absolute bottom-4 right-4 z-10 w-8 h-8 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                <ArrowUpRight className="w-4 h-4" />
+              <div className="absolute bottom-4 right-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                <ArrowUpRight className="w-5 h-5" />
               </div>
             </Link>
           </div>
@@ -177,18 +177,18 @@ export default function Home() {
                 <Layers className="text-primary w-8 h-8" />
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {skillsCategories.map((category) => (
-                  <div key={category.name} className="space-y-3">
-                    <h3 className="text-sm font-bold text-primary/90 uppercase tracking-widest">{category.name}</h3>
-                    <div className="flex flex-wrap gap-2">
+                  <div key={category.name} className="space-y-4">
+                    <h3 className="text-sm font-bold text-primary/90 uppercase tracking-[0.2em] border-l-2 border-primary/50 pl-3">{category.name}</h3>
+                    <div className="flex flex-wrap gap-3">
                       {category.skills.map((skill, skillIdx) => {
                         const styleClass = glowStyles[skillIdx % glowStyles.length];
                         return (
                           <span 
                             key={skill} 
                             className={cn(
-                              "tech-badge hover:scale-110",
+                              "tech-badge hover:scale-110 active:scale-95",
                               styleClass
                             )}
                           >
@@ -215,7 +215,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                 
-                <div className="relative p-8 h-full flex flex-col justify-between items-center text-center">
+                <div className="relative p-8 h-full flex flex-col justify-between items-start">
                    <div className="self-start">
                       <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                         <ArrowUpRight className="w-8 h-8" />
