@@ -12,7 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Send, Github, Twitter, Linkedin, Loader2, MessageSquare, ArrowLeft } from "lucide-react";
+import { Mail, Send, Github, Twitter, Linkedin, Loader2, MessageSquare, ArrowLeft, Instagram } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -83,9 +83,10 @@ export default function ContactPage() {
               <div>
                 <div className="text-xs text-muted-foreground uppercase tracking-widest font-bold">Social Connection</div>
                 <div className="flex gap-4 mt-1">
-                  <a href={bioData.github} className="text-muted-foreground hover:text-primary transition-colors"><Github className="w-5 h-5" /></a>
-                  <a href={bioData.twitter} className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></a>
-                  <a href={bioData.linkedin} className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="w-5 h-5" /></a>
+                  <a href={bioData.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github className="w-5 h-5" /></a>
+                  <a href={bioData.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></a>
+                  <a href={bioData.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="w-5 h-5" /></a>
+                  <a href={bioData.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Instagram className="w-5 h-5" /></a>
                 </div>
               </div>
             </div>

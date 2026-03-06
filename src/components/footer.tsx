@@ -1,6 +1,5 @@
-
 import { bioData } from "@/app/lib/data";
-import { Github, Twitter, Linkedin, Heart } from "lucide-react";
+import { Github, Twitter, Linkedin, Heart, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -16,14 +15,17 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href={bioData.github} className="text-muted-foreground hover:text-primary transition-colors">
+          <a href={bioData.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Github className="w-5 h-5" />
           </a>
-          <a href={bioData.twitter} className="text-muted-foreground hover:text-primary transition-colors">
+          <a href={bioData.twitter} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Twitter className="w-5 h-5" />
           </a>
-          <a href={bioData.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
+          <a href={bioData.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
             <Linkedin className="w-5 h-5" />
+          </a>
+          <a href={bioData.instagram} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <Instagram className="w-5 h-5" />
           </a>
         </div>
 

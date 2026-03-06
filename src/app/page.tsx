@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { PlaceHolderImages } from "@/app/lib/placeholder-images";
-import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Layers } from "lucide-react";
+import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Layers, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 function Clock() {
@@ -140,10 +140,11 @@ export default function Home() {
               </div>
 
               <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                <div className="flex gap-4">
-                  <a href={bioData.twitter} className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Twitter className="w-4 h-4" /></a>
-                  <a href={bioData.github} className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Github className="w-4 h-4" /></a>
-                  <a href={bioData.linkedin} className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Linkedin className="w-4 h-4" /></a>
+                <div className="flex gap-3">
+                  <a href={bioData.twitter} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Twitter className="w-4 h-4" /></a>
+                  <a href={bioData.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Github className="w-4 h-4" /></a>
+                  <a href={bioData.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Linkedin className="w-4 h-4" /></a>
+                  <a href={bioData.instagram} target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-xl border border-white/10 text-muted-foreground hover:text-primary transition-all"><Instagram className="w-4 h-4" /></a>
                 </div>
                 <Clock />
               </div>
@@ -188,7 +189,7 @@ export default function Home() {
                           <span 
                             key={skill} 
                             className={cn(
-                              "tech-badge hover:scale-110 active:scale-95",
+                              "tech-badge rounded-full px-3 py-1 text-[10px] hover:scale-110 active:scale-95 transition-all duration-300",
                               styleClass
                             )}
                           >
