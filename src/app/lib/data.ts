@@ -23,7 +23,7 @@ export const skillsCategories = [
   },
   {
     name: "GenAI / Machine Learning",
-    skills: ["HuggingFace", "OpenAI sdk", "Gemini sdk", "n8n", "LangSmith", "LangGraph", "LangChain"]
+    skills: ["HuggingFace", "OpenAI sdk", "Gemini sdk", "n8n", "LangGraph", "LangChain"]
   },
   {
     name: "Frontend",
