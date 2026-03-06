@@ -71,7 +71,6 @@ function FloatingBackground() {
 export default function Home() {
   const avatar = PlaceHolderImages.find(img => img.id === "profile-pic")!;
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
-  const animeImg = PlaceHolderImages.find(img => img.id === "anime-character")!;
   const projectsImg = PlaceHolderImages.find(img => img.id === "projects-cover")!;
 
   return (
@@ -86,7 +85,7 @@ export default function Home() {
             <div className="glass-card p-8 space-y-6 border-primary/20">
               <div className="flex items-center gap-4">
                 <div className="relative w-20 h-20 rounded-3xl overflow-hidden border border-primary/30">
-                  <Image src={avatar.imageUrl} alt={bioData.name} fill className="object-cover" data-ai-hint={avatar.imageHint} />
+                  <Image src="/B (1).png" alt={bioData.name} fill className="object-cover" />
                 </div>
                 <div>
                   <h1 className="text-xl font-bold tracking-tight text-white uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>{bioData.name}</h1>
@@ -148,7 +147,7 @@ export default function Home() {
 
             {/* Feature Image 2: Graphics Card Link */}
             <Link href="/graphics" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3]">
-              <Image src={animeImg.imageUrl} alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={animeImg.imageHint} />
+              <Image src="/Leo Messi.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
                 <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:synth-glow transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>GRAPHICS</h2>
@@ -191,11 +190,10 @@ export default function Home() {
             <Link href="/projects" className="block h-full group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all">
                 <Image 
-                  src={projectsImg.imageUrl} 
+                  src="/_ (38).jpeg" 
                   alt="Projects" 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 
-                  data-ai-hint={projectsImg.imageHint}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                 
