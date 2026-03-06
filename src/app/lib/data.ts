@@ -19,7 +19,7 @@ export const bioData = {
 export const skillsCategories = [
   {
     name: "Backend",
-    skills: ["Node.js", "Express.js", "FastAPI", "Python", "Rust", "Typescript / Javascript", "Redis", "Axum", "MongoDB", "Prisma ORM"]
+    skills: ["Node.js", "Express.js", "FastAPI", "Python", "Rust", "Typescript / Javascript", "Redis", "MongoDB", "Prisma ORM"]
   },
   {
     name: "GenAI / Machine Learning",
