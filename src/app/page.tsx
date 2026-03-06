@@ -29,6 +29,12 @@ function Clock() {
 }
 
 function FloatingBackground() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const particles = useMemo(() => {
     return Array.from({ length: 30 }).map((_, i) => ({
       id: i,
@@ -38,6 +44,8 @@ function FloatingBackground() {
       delay: Math.random() * 10,
     }));
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -191,8 +199,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
                 
-                <div className="relative p-8 h-full flex flex-col justify-between items-start">
-                   <div className="self-end">
+                <div className="relative p-8 h-full flex flex-col justify-between items-center text-center">
+                   <div className="self-center">
                       <div className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                         <ArrowUpRight className="w-8 h-8" />
                       </div>
