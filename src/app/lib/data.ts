@@ -43,7 +43,7 @@ export const skillsCategories = [
   },
   {
     name: "Tooling & Auth",
-    skills: ["NextAuth.js", "Clerk Auth", "Zod", "Vercel", "Render", "GitHub & Git", "Docker"]
+    skills: ["NextAuth.js", "Clerk Auth", "Firebase", "Vercel", "Render", "GitHub & Git", "Docker"]
   }
 ];
 
