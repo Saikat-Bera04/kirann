@@ -160,7 +160,7 @@ export default function Home() {
           </div>
 
           {/* Column 2: Tech Stack */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <div className="p-8 h-full space-y-8 border border-primary/10 rounded-[2.5rem] bg-card/20 backdrop-blur-sm">
               <div className="flex items-center justify-between bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-primary/20 shadow-xl">
                 <div>
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
 
           {/* Column 3: Projects Vertical Navigation */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-4">
             <Link href="/projects" className="block h-full group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all">
                 <Image 
