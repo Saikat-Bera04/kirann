@@ -89,7 +89,7 @@ export default function Home() {
                   <Image src={avatar.imageUrl} alt={bioData.name} fill className="object-cover" data-ai-hint={avatar.imageHint} />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold tracking-tight text-white uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>{bioData.name}</h1>
+                  <h1 className="text-xl font-bold tracking-tight text-white uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>{bioData.name}</h1>
                   <a 
                     href={`mailto:${bioData.email}`} 
                     className="text-muted-foreground text-sm hover:text-primary transition-colors block underline decoration-primary/30 underline-offset-4"
