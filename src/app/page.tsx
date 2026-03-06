@@ -19,10 +19,10 @@ function Clock() {
 
   return (
     <div className="text-right min-w-[100px]" style={{ fontFamily: "'Bitcount Single', monospace" }}>
-      <div className="text-2xl font-bold tracking-tighter text-primary">
+      <div className="text-lg font-bold tracking-tighter text-primary">
         {time ? time.toLocaleTimeString([], { hour12: false }) : "--:--:--"}
       </div>
-      <div className="text-xs text-muted-foreground uppercase tracking-widest font-medium">
+      <div className="text-[10px] text-muted-foreground uppercase tracking-widest font-medium">
         {time ? time.toLocaleDateString([], { weekday: 'long' }) : "..."}
       </div>
     </div>
