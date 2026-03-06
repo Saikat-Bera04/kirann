@@ -65,7 +65,6 @@ export default function Home() {
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
   const animeImg = PlaceHolderImages.find(img => img.id === "anime-character")!;
   const projectsImg = PlaceHolderImages.find(img => img.id === "projects-cover")!;
-  const rustLogo = PlaceHolderImages.find(img => img.id === "rust-logo")!;
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -116,10 +115,6 @@ export default function Home() {
 
             {/* Feature Image 1 */}
             <div className="relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3]">
-              <div className="absolute top-4 left-4 z-10 p-2 bg-black/40 backdrop-blur-md rounded-xl border border-primary/30">
-                <Image src={rustLogo.imageUrl} alt="Rust" width={24} height={24} className="rounded" data-ai-hint={rustLogo.imageHint} />
-                <p className="text-[10px] font-bold mt-1 text-center text-primary">Rust</p>
-              </div>
               <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={spidermanImg.imageHint} />
             </div>
 
