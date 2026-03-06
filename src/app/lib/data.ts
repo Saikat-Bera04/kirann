@@ -10,7 +10,9 @@ export const bioData = {
   twitter: "https://twitter.com/saikat",
   linkedin: "https://linkedin.com/in/saikat",
   currentlyBuilding: "Personal Portfolio",
-  internship: "XpectrumAI"
+  internship: "Girlscript foundation",
+  internshipUrl: "https://www.girlscript.org/",
+  internshipTitle: "Graphics Intern"
 };
 
 export const skillsCategories = [

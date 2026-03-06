@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -53,6 +52,7 @@ function FloatingBackground() {
             bottom: `-20px`,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
+            backgroundColor: "hsl(var(--primary))",
           }}
         />
       ))}
@@ -99,7 +99,17 @@ export default function Home() {
                 <p className="text-sm font-bold leading-relaxed">{bioData.about}</p>
                 <div className="space-y-1 text-xs">
                   <p><span className="text-muted-foreground">Currently building:</span> <span className="text-primary hover:underline cursor-pointer">{bioData.currentlyBuilding}</span></p>
-                  <p><span className="text-muted-foreground">Full Stack Intern:</span> <span className="text-primary hover:underline cursor-pointer">{bioData.internship}</span></p>
+                  <p>
+                    <span className="text-muted-foreground">{bioData.internshipTitle}:</span>{" "}
+                    <a 
+                      href={bioData.internshipUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:underline decoration-primary/30 underline-offset-4 font-bold"
+                    >
+                      {bioData.internship}
+                    </a>
+                  </p>
                 </div>
               </div>
 
