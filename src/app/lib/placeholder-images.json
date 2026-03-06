@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -20,9 +21,9 @@
     },
     {
       "id": "projects-cover",
-      "description": "Stylish anime character vertical cover",
-      "imageUrl": "https://picsum.photos/seed/projects-spike/600/1000",
-      "imageHint": "anime character"
+      "description": "Custom project section cover image",
+      "imageUrl": "/_ (38).jpeg",
+      "imageHint": "technical project"
     },
     {
       "id": "rust-logo",
