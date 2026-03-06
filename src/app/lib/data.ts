@@ -4,7 +4,7 @@ export const bioData = {
   title: "Full Stack Engineer & GenAI Enthusiast",
   tagline: "Building scalable backends and genAI products.",
   about: "Hi I am Saikat and I build scalable backends and genAI products.",
-  location: "India",
+  location: "Kolkata",
   email: "work.saikatbera@gmail.com",
   github: "https://github.com/Saikat-Bera04",
   twitter: "https://twitter.com/saikat",
