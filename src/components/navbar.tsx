@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Terminal } from "lucide-react";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -12,8 +12,14 @@ export function Navbar() {
     <nav className="fixed top-0 z-50 w-full px-4 pt-6 pointer-events-none">
       <div className="container mx-auto max-w-7xl flex items-center justify-between pointer-events-auto">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center transition-all group-hover:bg-white/10">
-            <Terminal className="text-white w-5 h-5" />
+          <div className="relative w-10 h-10 overflow-hidden">
+            <Image 
+              src="/B (1).png" 
+              alt="Logo" 
+              width={40} 
+              height={40} 
+              className="object-contain"
+            />
           </div>
           <span className="font-bold text-lg tracking-tighter text-white/90">
             moChak<span className="text-primary">.rs</span>
@@ -42,7 +48,7 @@ export function Navbar() {
 
         <Link 
           href="/contact"
-          className="bg-primary text-white px-6 py-2 rounded-full text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
+          className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-xs font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20"
         >
           Let's talk
         </Link>
