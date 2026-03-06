@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -128,7 +127,7 @@ export default function Home() {
               <Image src={animeImg.imageUrl} alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={animeImg.imageHint} />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
               <div className="absolute bottom-8 left-8 z-10">
-                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 transition-opacity" style={{ fontFamily: "'Iceberg', cursive" }}>GRAPHICS</h2>
+                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 transition-opacity uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>GRAPHICS</h2>
               </div>
               <div className="absolute bottom-4 right-4 z-10 w-8 h-8 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                 <ArrowUpRight className="w-4 h-4" />
