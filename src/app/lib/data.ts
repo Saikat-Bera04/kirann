@@ -34,6 +34,10 @@ export const skillsCategories = [
     skills: ["Solidity", "Ether.js", "Foundry", "Rust (Solana)", "Anchor"]
   },
   {
+    name: "Graphics & Designing",
+    skills: ["Canva", "Figma", "Adobe Pr", "Adobe illustrator"]
+  },
+  {
     name: "Realtime & Infra",
     skills: ["WebSockets", "WebRTC", "BullMQ", "Redis Queue", "Supabase"]
   },
