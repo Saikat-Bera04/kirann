@@ -85,7 +85,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative overflow-hidden">
       <FloatingBackground />
-      <div className="container mx-auto px-4 pb-4 pt-[10px] max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 pb-4 mt-[10px] max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
           {/* Column 1: Profile & Images */}
