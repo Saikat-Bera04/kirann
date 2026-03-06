@@ -1,9 +1,10 @@
+
 {
   "placeholderImages": [
     {
       "id": "profile-pic",
       "description": "Avatar of Saikat",
-      "imageUrl": "https://picsum.photos/seed/saikat-avatar/200/200",
+      "imageUrl": "https://picsum.photos/seed/saikat-professional/200/200",
       "imageHint": "profile avatar"
     },
     {
@@ -21,7 +22,7 @@
     {
       "id": "projects-cover",
       "description": "Custom project section cover image",
-      "imageUrl": "/TAN ZlRO.jpeg",
+      "imageUrl": "/_ (38).jpeg",
       "imageHint": "technical project"
     },
     {
