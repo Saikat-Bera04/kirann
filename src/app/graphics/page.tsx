@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { graphicsData } from "@/app/lib/data";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function GraphicsPage() {
   return (
@@ -14,8 +14,7 @@ export default function GraphicsPage() {
       </Link>
 
       <div className="space-y-4 mb-16">
-        <h1 className="text-5xl font-black tracking-tighter flex items-center gap-4">
-          <Sparkles className="text-primary w-8 h-8" />
+        <h1 className="text-5xl font-black tracking-tighter">
           GRAPHIC <span className="text-primary">GALLERY</span>
         </h1>
         <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
