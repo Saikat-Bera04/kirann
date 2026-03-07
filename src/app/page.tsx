@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -72,6 +71,7 @@ function FloatingBackground() {
 
 export default function Home() {
   const certsImg = PlaceHolderImages.find(img => img.id === "certifications-cover")!;
+  const projectsImg = PlaceHolderImages.find(img => img.id === "projects-cover")!;
 
   const glowStyles = [
     "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-primary/10",
@@ -217,7 +217,7 @@ export default function Home() {
             <Link href="/projects" className="block h-full group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all rounded-[2.5rem]">
                 <Image 
-                  src="/_ (38).jpeg" 
+                  src={projectsImg.imageUrl} 
                   alt="Projects" 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 
