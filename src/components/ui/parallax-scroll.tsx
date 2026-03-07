@@ -13,7 +13,6 @@ export const ParallaxScroll = ({
 }) => {
   const gridRef = useRef<HTMLDivElement>(null);
   
-  // Removing the container prop makes useScroll target the window scroll
   const { scrollYProgress } = useScroll({
     target: gridRef,
     offset: ["start end", "end start"],
@@ -51,8 +50,8 @@ export const ParallaxScroll = ({
                 width="400"
                 alt={el.title}
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                <span className="text-white font-black tracking-[0.3em] uppercase text-sm border-y border-primary/50 py-2 px-6 bg-background/60 backdrop-blur-md synth-glow">
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6 pointer-events-none">
+                <span className="text-white font-black tracking-[0.2em] uppercase text-xs opacity-80">
                   {el.title}
                 </span>
               </div>
@@ -73,8 +72,8 @@ export const ParallaxScroll = ({
                 width="400"
                 alt={el.title}
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                <span className="text-white font-black tracking-[0.3em] uppercase text-sm border-y border-primary/50 py-2 px-6 bg-background/60 backdrop-blur-md synth-glow">
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6 pointer-events-none">
+                <span className="text-white font-black tracking-[0.2em] uppercase text-xs opacity-80">
                   {el.title}
                 </span>
               </div>
@@ -95,8 +94,8 @@ export const ParallaxScroll = ({
                 width="400"
                 alt={el.title}
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                <span className="text-white font-black tracking-[0.3em] uppercase text-sm border-y border-primary/50 py-2 px-6 bg-background/60 backdrop-blur-md synth-glow">
+              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6 pointer-events-none">
+                <span className="text-white font-black tracking-[0.2em] uppercase text-xs opacity-80">
                   {el.title}
                 </span>
               </div>
