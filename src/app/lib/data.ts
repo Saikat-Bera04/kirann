@@ -19,42 +19,32 @@ export const bioData = {
 
 export const skillsCategories = [
   {
-    name: "Frontend",
-    skills: [
-      "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Astro", "Remix", "Vite", 
-      "Tailwind CSS", "Radix UI", "Semantic UI React", "Chart.js", "Three.js", "Expo", "React Router", 
-      "React Query", "Context API"
-    ]
+    name: "Frontend Development",
+    skills: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript", "HTML", "CSS", "TailwindCSS"]
   },
   {
-    name: "Backend & Database",
-    skills: [
-      "Node.js", "Express.js", "NestJS", "Bun", "Deno", "Python", "Django", "FastAPI", "Flask", "C++", 
-      "EJS", "Socket.io", "JWT", "Prisma", "Hibernate", "MongoDB", "MySQL", "PostgreSQL", "SQLite", 
-      "Redis", "Supabase", "Firebase", "ArangoDB", "Neo4j"
-    ]
+    name: "Backend Development",
+    skills: ["Node.js", "Express.js", "NestJS", "Python", "FastAPI"]
   },
   {
-    name: "Developing Tools & Cloud",
-    skills: [
-      "Git", "GitHub", "GitLab", "GitLab CI", "NPM", "PNPM", "Webpack", "Postman", "Fastlane", "Twilio", 
-      "AWS", "Azure", "Google Cloud", "Cloudflare", "Vercel", "Netlify", "Render", "Vultr", "Apache", "PowerShell"
-    ]
+    name: "Database Management",
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Firebase", "Supabase"]
   },
   {
-    name: "Designing Tools",
-    skills: [
-      "Figma", "Framer", "Adobe Creative Suite", "Adobe Illustrator", "Canva", "Dribbble", "Sketch", 
-      "Blender", "Unity", "OpenGL"
-    ]
+    name: "Cloud & DevOps",
+    skills: ["AWS", "Google Cloud", "Cloudflare", "Vercel", "Netlify", "Docker", "Git"]
   },
   {
-    name: "Web3 & Blockchain",
-    skills: ["Solidity", "Web3.js", "Remix IDE", "Hardhat"]
+    name: "Web3 Development",
+    skills: ["Solidity", "Hardhat", "Web3.js", "Remix"]
   },
   {
-    name: "AI & Computer Vision",
-    skills: ["OpenCV", "Streamlit"]
+    name: "AI & LLM Engineering",
+    skills: ["LangChain", "LangGraph", "Hugging Face", "OpenCV", "Streamlit"]
+  },
+  {
+    name: "Design & Creative Tools",
+    skills: ["Figma", "Framer", "Adobe Illustrator", "Blender", "Canva"]
   }
 ];
 
