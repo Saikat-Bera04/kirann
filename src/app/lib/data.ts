@@ -29,7 +29,7 @@ export const skillsCategories = [
   {
     name: "Backend & Database",
     skills: [
-      "Node.js", "Express.js", "NestJS", "Bun", "Deno", "Python", "Django", "FastAPI", "Flask", "C", "C++", 
+      "Node.js", "Express.js", "NestJS", "Bun", "Deno", "Python", "Django", "FastAPI", "Flask", "C++", 
       "EJS", "Socket.io", "JWT", "Prisma", "Hibernate", "MongoDB", "MySQL", "PostgreSQL", "SQLite", 
       "Redis", "Supabase", "Firebase", "ArangoDB", "Neo4j"
     ]
