@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -22,9 +21,7 @@ export default function GraphicsPage() {
         </p>
       </div>
 
-      <div className="rounded-[2.5rem] overflow-hidden border border-white/10 bg-card/20 backdrop-blur-sm shadow-2xl">
-        <ParallaxScrollDemo />
-      </div>
+      <ParallaxScrollDemo />
     </div>
   );
 }
