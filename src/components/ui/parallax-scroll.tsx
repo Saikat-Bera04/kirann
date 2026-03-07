@@ -1,7 +1,8 @@
+
 "use client";
 
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export const ParallaxScroll = ({
@@ -12,6 +13,11 @@ export const ParallaxScroll = ({
   className?: string;
 }) => {
   const gridRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
   const { scrollYProgress } = useScroll({
     target: gridRef,
@@ -21,6 +27,8 @@ export const ParallaxScroll = ({
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
+
+  if (!mounted) return null;
 
   const third = Math.ceil(images.length / 3);
 
@@ -41,7 +49,7 @@ export const ParallaxScroll = ({
             <motion.div
               style={{ y: translateFirst }}
               key={"grid-1" + idx}
-              className="relative group overflow-hidden rounded-2xl border border-primary/20 shadow-2xl"
+              className="relative group overflow-hidden rounded-2xl"
             >
               <img
                 src={el.src}
@@ -50,8 +58,8 @@ export const ParallaxScroll = ({
                 width="400"
                 alt={el.title}
               />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6 pointer-events-none">
-                <span className="text-white font-black tracking-[0.2em] uppercase text-xs opacity-80">
+              <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span className="text-white font-black tracking-[0.2em] uppercase text-xs">
                   {el.title}
                 </span>
               </div>
@@ -63,7 +71,7 @@ export const ParallaxScroll = ({
             <motion.div 
               style={{ y: translateSecond }} 
               key={"grid-2" + idx}
-              className="relative group overflow-hidden rounded-2xl border border-primary/20 shadow-2xl"
+              className="relative group overflow-hidden rounded-2xl"
             >
               <img
                 src={el.src}
@@ -72,8 +80,8 @@ export const ParallaxScroll = ({
                 width="400"
                 alt={el.title}
               />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6 pointer-events-none">
-                <span className="text-white font-black tracking-[0.2em] uppercase text-xs opacity-80">
+              <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span className="text-white font-black tracking-[0.2em] uppercase text-xs">
                   {el.title}
                 </span>
               </div>
@@ -85,7 +93,7 @@ export const ParallaxScroll = ({
             <motion.div 
               style={{ y: translateThird }} 
               key={"grid-3" + idx}
-              className="relative group overflow-hidden rounded-2xl border border-primary/20 shadow-2xl"
+              className="relative group overflow-hidden rounded-2xl"
             >
               <img
                 src={el.src}
@@ -94,8 +102,8 @@ export const ParallaxScroll = ({
                 width="400"
                 alt={el.title}
               />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-6 pointer-events-none">
-                <span className="text-white font-black tracking-[0.2em] uppercase text-xs opacity-80">
+              <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <span className="text-white font-black tracking-[0.2em] uppercase text-xs">
                   {el.title}
                 </span>
               </div>
