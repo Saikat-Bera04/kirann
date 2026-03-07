@@ -133,20 +133,23 @@ export const certificationsData = [
     title: "Meta Backend Professional",
     issuer: "Coursera",
     date: "2024",
-    link: "https://coursera.org"
+    link: "https://coursera.org",
+    imageHint: "meta developer"
   },
   {
     id: "cert-2",
     title: "AWS Certified Developer",
     issuer: "Amazon Web Services",
     date: "2023",
-    link: "https://aws.amazon.com"
+    link: "https://aws.amazon.com",
+    imageHint: "cloud computing"
   },
   {
     id: "cert-3",
     title: "Google Data Analytics",
     issuer: "Coursera",
     date: "2023",
-    link: "https://coursera.org"
+    link: "https://coursera.org",
+    imageHint: "data analysis"
   }
 ];
