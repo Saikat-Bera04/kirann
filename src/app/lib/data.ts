@@ -19,32 +19,42 @@ export const bioData = {
 
 export const skillsCategories = [
   {
-    name: "Backend",
-    skills: ["Node.js", "Express.js", "FastAPI", "Python", "Rust", "Typescript / Javascript", "Redis", "MongoDB", "Prisma ORM"]
-  },
-  {
-    name: "GenAI / Machine Learning",
-    skills: ["HuggingFace", "OpenAI sdk", "Gemini sdk", "n8n", "LangGraph", "LangChain"]
-  },
-  {
     name: "Frontend",
-    skills: ["Next.js", "React.js", "Tailwind CSS", "Aceternity UI", "ShadCN"]
+    skills: [
+      "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Astro", "Remix", "Vite", 
+      "Tailwind CSS", "Radix UI", "Semantic UI React", "Chart.js", "Three.js", "Expo", "React Router", 
+      "React Query", "Context API"
+    ]
   },
   {
-    name: "Web3",
-    skills: ["Solidity", "Ether.js", "Foundry", "Rust (Solana)", "Anchor"]
+    name: "Backend & Database",
+    skills: [
+      "Node.js", "Express.js", "NestJS", "Bun", "Deno", "Python", "Django", "FastAPI", "Flask", "C", "C++", 
+      "EJS", "Socket.io", "JWT", "Prisma", "Hibernate", "MongoDB", "MySQL", "PostgreSQL", "SQLite", 
+      "Redis", "Supabase", "Firebase", "ArangoDB", "Neo4j"
+    ]
   },
   {
-    name: "Graphics & Designing",
-    skills: ["Canva", "Figma", "Adobe Pr", "Adobe illustrator"]
+    name: "Developing Tools & Cloud",
+    skills: [
+      "Git", "GitHub", "GitLab", "GitLab CI", "NPM", "PNPM", "Webpack", "Postman", "Fastlane", "Twilio", 
+      "AWS", "Azure", "Google Cloud", "Cloudflare", "Vercel", "Netlify", "Render", "Vultr", "Apache", "PowerShell"
+    ]
   },
   {
-    name: "Realtime & Infra",
-    skills: ["WebSockets", "WebRTC", "BullMQ", "Redis Queue", "Supabase"]
+    name: "Designing Tools",
+    skills: [
+      "Figma", "Framer", "Adobe Creative Suite", "Adobe Illustrator", "Canva", "Dribbble", "Sketch", 
+      "Blender", "Unity", "OpenGL"
+    ]
   },
   {
-    name: "Tooling & Auth",
-    skills: ["NextAuth.js", "Clerk Auth", "Firebase", "Vercel", "Render", "GitHub & Git", "Docker"]
+    name: "Web3 & Blockchain",
+    skills: ["Solidity", "Web3.js", "Remix IDE", "Hardhat"]
+  },
+  {
+    name: "AI & Computer Vision",
+    skills: ["OpenCV", "Streamlit"]
   }
 ];
 
