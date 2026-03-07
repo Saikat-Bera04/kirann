@@ -126,3 +126,27 @@ export const graphicsData = [
   { id: "g5", title: "Synthwave Car", url: "https://picsum.photos/seed/synth-car/800/600", hint: "synthwave car" },
   { id: "g6", title: "Retro Future", url: "https://picsum.photos/seed/retro-future/800/600", hint: "retro future" },
 ];
+
+export const certificationsData = [
+  {
+    id: "cert-1",
+    title: "Meta Backend Professional",
+    issuer: "Coursera",
+    date: "2024",
+    link: "https://coursera.org"
+  },
+  {
+    id: "cert-2",
+    title: "AWS Certified Developer",
+    issuer: "Amazon Web Services",
+    date: "2023",
+    link: "https://aws.amazon.com"
+  },
+  {
+    id: "cert-3",
+    title: "Google Data Analytics",
+    issuer: "Coursera",
+    date: "2023",
+    link: "https://coursera.org"
+  }
+];

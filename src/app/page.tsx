@@ -71,6 +71,7 @@ function FloatingBackground() {
 
 export default function Home() {
   const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
+  const certsImg = PlaceHolderImages.find(img => img.id === "certifications-cover")!;
 
   const glowStyles = [
     "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-primary/10",
@@ -88,7 +89,7 @@ export default function Home() {
       <div className="container mx-auto px-4 pb-4 mt-[10px] max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
-          {/* Column 1: Profile & Images */}
+          {/* Column 1: Profile & Cards */}
           <div className="md:col-span-4 space-y-6">
             {/* Profile Card */}
             <div className="glass-card p-8 space-y-6 border-primary/20">
@@ -150,17 +151,24 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Feature Image 1 */}
-            <div className="relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
-              <Image src={spidermanImg.imageUrl} alt="Art" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={spidermanImg.imageHint} />
-            </div>
-
-            {/* Feature Image 2: Graphics Card Link */}
+            {/* Graphics Card Link */}
             <Link href="/graphics" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
               <Image src="/Leo Messi.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
                 <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>GRAPHICS</h2>
+              </div>
+              <div className="absolute bottom-4 right-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                <ArrowUpRight className="w-5 h-5" />
+              </div>
+            </Link>
+
+            {/* Certifications Card Link */}
+            <Link href="/certifications" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
+              <Image src={certsImg.imageUrl} alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={certsImg.imageHint} />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
+              <div className="absolute bottom-6 left-6 z-10">
+                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>CERTIFICATIONS</h2>
               </div>
               <div className="absolute bottom-4 right-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                 <ArrowUpRight className="w-5 h-5" />
@@ -209,7 +217,7 @@ export default function Home() {
             <Link href="/projects" className="block h-full group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all">
                 <Image 
-                  src="/_ (38).jpeg" 
+                  src="/_ (36).jpeg" 
                   alt="Projects" 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 

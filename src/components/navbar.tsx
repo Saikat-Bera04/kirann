@@ -30,6 +30,7 @@ export function Navbar() {
           {[
             { name: "home", href: "/" },
             { name: "projects", href: "/projects" },
+            { name: "certifications", href: "/certifications" },
             { name: "graphics", href: "/graphics" },
             { name: "contact", href: "/contact" },
           ].map((item) => (
