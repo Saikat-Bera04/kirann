@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -70,7 +71,6 @@ function FloatingBackground() {
 }
 
 export default function Home() {
-  const spidermanImg = PlaceHolderImages.find(img => img.id === "spiderman-hammock")!;
   const certsImg = PlaceHolderImages.find(img => img.id === "certifications-cover")!;
 
   const glowStyles = [
@@ -215,7 +215,7 @@ export default function Home() {
           {/* Column 3: Projects Vertical Navigation */}
           <div className="md:col-span-4">
             <Link href="/projects" className="block h-full group">
-              <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all">
+              <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all rounded-[2.5rem]">
                 <Image 
                   src="/_ (36).jpeg" 
                   alt="Projects" 
