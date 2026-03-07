@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -21,7 +22,7 @@
     {
       "id": "projects-cover",
       "description": "Custom project section cover image",
-      "imageUrl": "/_ (36).jpeg",
+      "imageUrl": "/_ (38).jpeg",
       "imageHint": "technical project"
     },
     {
