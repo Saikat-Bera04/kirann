@@ -168,7 +168,7 @@ export default function Home() {
               <Image src={certsImg.imageUrl} alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={certsImg.imageHint} />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
-                <h2 className="text-4xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>CERTIFICATIONS</h2>
+                <h2 className="text-2xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>CERTIFICATIONS</h2>
               </div>
               <div className="absolute bottom-4 right-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                 <ArrowUpRight className="w-5 h-5" />
