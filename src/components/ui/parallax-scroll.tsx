@@ -1,8 +1,7 @@
-
 "use client";
-import { useScroll, useTransform } from "framer-motion";
+
+import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const ParallaxScroll = ({
@@ -12,7 +11,7 @@ export const ParallaxScroll = ({
   images: string[];
   className?: string;
 }) => {
-  const gridRef = useRef<any>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     container: gridRef,
     offset: ["start start", "end start"],

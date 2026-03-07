@@ -1,7 +1,6 @@
-
 "use client";
 
-import { skillsData } from "@/app/lib/data";
+import { skillsCategories } from "@/app/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Layers } from "lucide-react";
@@ -19,7 +18,7 @@ export function SkillsMatrix() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {skillsData.map((category) => (
+        {skillsCategories.map((category) => (
           <Card key={category.name} className="bg-card/50 border-primary/20 hover:border-primary/50 transition-all hover:translate-y-[-4px]">
             <CardHeader>
               <CardTitle className="text-xl text-primary font-bold">
