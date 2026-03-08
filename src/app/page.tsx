@@ -40,6 +40,7 @@ function FloatingBackground() {
       id: i,
       size: Math.random() * 4 + 2,
       left: Math.random() * 100,
+      bottom: -20,
       duration: Math.random() * 10 + 10,
       delay: Math.random() * 10,
     }));
@@ -57,7 +58,7 @@ function FloatingBackground() {
             width: `${p.size}px`,
             height: `${p.size}px`,
             left: `${p.left}%`,
-            bottom: `-20px`,
+            bottom: `${p.bottom}px`,
             animationDuration: `${p.duration}s`,
             animationDelay: `${p.delay}s`,
             backgroundColor: "hsl(var(--primary))",
@@ -76,7 +77,7 @@ export default function Home() {
     "hover:border-pink-500 hover:text-pink-400 hover:shadow-[0_0_15px_rgba(236,72,153,0.6)] hover:bg-pink-500/10",
     "hover:border-orange-500 hover:text-orange-400 hover:shadow-[0_0_15px_rgba(249,115,22,0.6)] hover:bg-orange-500/10",
     "hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.6)] hover:bg-cyan-400/10",
-    "hover:border-yellow-400 hover:text-yellow-300 hover:shadow-[0_0_15px_rgba(250,204,21,0.6)] hover:bg-yellow-400/10",
+    "hover:border-yellow-400 hover:text-yellow-300 hover:shadow-[0_0_15_rgba(250,204,21,0.6)] hover:bg-yellow-400/10",
   ];
 
   return (
