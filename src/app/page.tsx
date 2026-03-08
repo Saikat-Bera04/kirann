@@ -213,7 +213,7 @@ export default function Home() {
             <Link href="/projects" className="block h-full group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all rounded-[2.5rem]">
                 <Image 
-                  src="/sp.jpeg" 
+                  src="/Untitled design (2).png" 
                   alt="Projects" 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 
