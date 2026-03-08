@@ -1,14 +1,21 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Storyteller } from "@/components/portfolio/storyteller";
 import { Github, ExternalLink, ArrowLeft, Terminal, Home, Loader2 } from "lucide-react";
+
+const PROJECT_IMAGES = [
+  "/_ (37).jpeg",
+  "/_ (41).jpeg",
+  "https://picsum.photos/seed/rust-lang/600/400",
+  "https://picsum.photos/seed/web3-tech/600/400",
+  "https://picsum.photos/seed/ai-data/600/400",
+  "https://picsum.photos/seed/collab-network/600/400"
+];
 
 export default function ProjectPage() {
   const params = useParams();
@@ -51,7 +58,7 @@ export default function ProjectPage() {
     );
   }
 
-  const projectImage = PlaceHolderImages[repo.id % PlaceHolderImages.length] || PlaceHolderImages[0];
+  const projectImageUrl = PROJECT_IMAGES[repo.id % PROJECT_IMAGES.length];
   const tags = [...(repo.topics || []), repo.language].filter(Boolean);
 
   // Adapt repo for Storyteller
@@ -60,7 +67,7 @@ export default function ProjectPage() {
     title: repo.name,
     description: repo.description || "",
     longDescription: repo.description || "A technical repository exploring engineering concepts.",
-    image: projectImage.id,
+    image: projectImageUrl,
     tags: tags,
     year: new Date(repo.created_at).getFullYear().toString(),
     repoUrl: repo.html_url,
@@ -146,11 +153,10 @@ export default function ProjectPage() {
         <div className="space-y-8">
           <div className="relative aspect-video rounded-none overflow-hidden border border-border group">
             <Image 
-              src={projectImage.imageUrl}
+              src={projectImageUrl}
               alt={repo.name}
               fill
               className="object-cover"
-              data-ai-hint={projectImage.imageHint}
             />
           </div>
 

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useMemo } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
-import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Layers, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -70,8 +69,6 @@ function FloatingBackground() {
 }
 
 export default function Home() {
-  const projectsImg = PlaceHolderImages.find(img => img.id === "projects-cover")!;
-
   const glowStyles = [
     "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-primary/10",
     "hover:border-purple-500 hover:text-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.6)] hover:bg-purple-500/10",
@@ -164,7 +161,7 @@ export default function Home() {
 
             {/* Certifications Card Link */}
             <Link href="/certifications" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
-              <Image src={projectsImg.imageUrl} alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" data-ai-hint={projectsImg.imageHint} />
+              <Image src="/_ (35).jpeg" alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
                 <h2 className="text-2xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>CERTIFICATIONS</h2>
@@ -216,7 +213,7 @@ export default function Home() {
             <Link href="/projects" className="block h-full group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all rounded-[2.5rem]">
                 <Image 
-                  src={projectsImg.imageUrl} 
+                  src="/_ (41).jpeg" 
                   alt="Projects" 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 

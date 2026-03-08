@@ -1,14 +1,21 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PlaceHolderImages } from "@/app/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowUpRight, Search, Code2, ArrowLeft, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
+
+const PROJECT_IMAGES = [
+  "/_ (37).jpeg",
+  "/_ (41).jpeg",
+  "https://picsum.photos/seed/rust-lang/600/400",
+  "https://picsum.photos/seed/web3-tech/600/400",
+  "https://picsum.photos/seed/ai-data/600/400",
+  "https://picsum.photos/seed/collab-network/600/400"
+];
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState("");
@@ -69,20 +76,18 @@ export default function ProjectsPage() {
       ) : (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((repo) => {
-              // Use a consistent placeholder based on repo ID or default
-              const projectImage = PlaceHolderImages[repo.id % PlaceHolderImages.length] || PlaceHolderImages[0];
+            {filteredProjects.map((repo, idx) => {
+              const projectImageUrl = PROJECT_IMAGES[idx % PROJECT_IMAGES.length];
               const year = new Date(repo.created_at).getFullYear();
               
               return (
                 <Card key={repo.id} className="group bg-card/50 border-border overflow-hidden hover:border-primary/50 transition-all rounded-none">
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <Image 
-                      src={projectImage.imageUrl}
+                      src={projectImageUrl}
                       alt={repo.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      data-ai-hint={projectImage.imageHint}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
                     <Link 
