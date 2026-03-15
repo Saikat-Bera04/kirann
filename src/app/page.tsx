@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import { bioData, skillsCategories } from "@/app/lib/data";
 import { Github, Twitter, Linkedin, MapPin, ArrowUpRight, Layers, Instagram } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -28,47 +28,6 @@ function Clock() {
   );
 }
 
-function FloatingBackground() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const particles = useMemo(() => {
-    return Array.from({ length: 30 }).map((_, i) => ({
-      id: i,
-      size: Math.random() * 4 + 2,
-      left: Math.random() * 100,
-      bottom: -20,
-      duration: Math.random() * 10 + 10,
-      delay: Math.random() * 10,
-    }));
-  }, []);
-
-  if (!mounted) return null;
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {particles.map((p) => (
-        <div
-          key={p.id}
-          className="particle"
-          style={{
-            width: `${p.size}px`,
-            height: `${p.size}px`,
-            left: `${p.left}%`,
-            bottom: `${p.bottom}px`,
-            animationDuration: `${p.duration}s`,
-            animationDelay: `${p.delay}s`,
-            backgroundColor: "hsl(var(--primary))",
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 export default function Home() {
   const glowStyles = [
     "hover:border-primary hover:text-primary hover:shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-primary/10",
@@ -82,7 +41,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <FloatingBackground />
       <div className="container mx-auto px-4 pb-4 mt-[10px] max-w-7xl relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
