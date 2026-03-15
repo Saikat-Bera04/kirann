@@ -120,7 +120,7 @@ export default function Home() {
 
             {/* Certifications Card Link */}
             <Link href="/certifications" className="block relative group overflow-hidden rounded-[2.5rem] border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm">
-              <Image src="/_ (35).jpeg" alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src="/_ (37).jpeg" alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-6 left-6 z-10">
                 <h2 className="text-2xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>CERTIFICATIONS</h2>
