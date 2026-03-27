@@ -119,13 +119,25 @@ export const projectsData: Project[] = [
 ];
 
 export const graphicsData = [
-  { id: "g1", title: "Cyberpunk City", url: "https://picsum.photos/seed/cyber-city/800/600", hint: "cyberpunk city" },
-  { id: "g2", title: "Neon Samurai", url: "https://picsum.photos/seed/neon-samurai/800/600", hint: "samurai neon" },
-  { id: "g3", title: "Vaporwave Sunset", url: "https://picsum.photos/seed/vapor-sunset/800/600", hint: "vaporwave sunset" },
-  { id: "g4", title: "Lofi Room", url: "https://picsum.photos/seed/lofi-room/800/600", hint: "lofi room" },
-  { id: "g5", title: "Synthwave Car", url: "https://picsum.photos/seed/synth-car/800/600", hint: "synthwave car" },
-  { id: "g6", title: "Retro Future", url: "https://picsum.photos/seed/retro-future/800/600", hint: "retro future" },
+  { id: "g1", title: "Beyond Campus", url: "/graphics/Beyond Campus, Into the Future (1) (1).png" },
+  { id: "g2", title: "Personal Branding", url: "/graphics/Saikat Logo.png" },
+  { id: "g3", title: "Fashion Poster", url: "/graphics/Brown and White Modern New Fashion Poster (3).png" },
+  { id: "g4", title: "Zync It", url: "/graphics/Zync It or Risk it. (4).png" },
+  { id: "g5", title: "CampusKart", url: "/graphics/campuskart promotion.png" },
+  { id: "g6", title: "Lucky Draw", url: "/graphics/To get a chance to win (1).jpg" },
+  { id: "g7", title: "Visual Concept 1", url: "/graphics/1 (1).jpg" },
+  { id: "g8", title: "Visual Concept 2", url: "/graphics/1.png" },
+  { id: "g9", title: "Visual Concept 3", url: "/graphics/2.png" },
+  { id: "g10", title: "Visual Concept 4", url: "/graphics/3.png" },
+  { id: "g11", title: "Messi & Jesus", url: "/1440P Wallpaper Messi and Jesus.jpeg" },
+  { id: "g12", title: "Creative Design", url: "/Untitled design (2).png" },
+  { id: "g13", title: "Atmospheric", url: "/sp.jpeg" },
+  { id: "g14", title: "Profile Graphic", url: "/B (1).png" },
+  { id: "g15", title: "Abstract 37", url: "/_ (37).jpeg" },
+  { id: "g16", title: "Abstract 38", url: "/_ (38).jpeg" },
+  { id: "g17", title: "Abstract 40", url: "/_ (40).jpeg" },
 ];
+
 
 export const certificationsData = [
   {
