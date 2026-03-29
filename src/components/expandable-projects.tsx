@@ -3,6 +3,8 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { ExternalLink, Github, X } from "lucide-react";
+import { PROJECT_IMAGES_MAP } from "@/app/lib/data";
+
 
 interface Repo {
   id: number;
@@ -15,7 +17,7 @@ interface Repo {
   created_at: string;
 }
 
-const PROJECT_IMAGES = [
+const DEFAULT_PLACEHOLDERS = [
   "/_ (37).jpeg",
   "/_ (41).jpeg",
   "https://picsum.photos/seed/rust-lang/600/400",
@@ -23,6 +25,15 @@ const PROJECT_IMAGES = [
   "https://picsum.photos/seed/ai-data/600/400",
   "https://picsum.photos/seed/collab-network/600/400"
 ];
+
+const getProjectImage = (repoName: string, id: number) => {
+  // Check exact match or lowercase match
+  const image = PROJECT_IMAGES_MAP[repoName] || PROJECT_IMAGES_MAP[repoName.toLowerCase()];
+  if (image) return image;
+  
+  // Fallback to placeholders
+  return DEFAULT_PLACEHOLDERS[id % DEFAULT_PLACEHOLDERS.length];
+};
 
 export function ExpandableProjects({ repos }: { repos: Repo[] }) {
   const [active, setActive] = useState<Repo | null>(null);
@@ -81,7 +92,7 @@ export function ExpandableProjects({ repos }: { repos: Repo[] }) {
             >
               <motion.div layoutId={`image-${active.name}-${id}`}>
                 <img
-                  src={PROJECT_IMAGES[active.id % PROJECT_IMAGES.length]}
+                  src={getProjectImage(active.name, active.id)}
                   alt={active.name}
                   className="w-full h-64 lg:h-80 object-cover object-center"
                 />
@@ -162,7 +173,7 @@ export function ExpandableProjects({ repos }: { repos: Repo[] }) {
             <div className="flex gap-4 flex-col md:flex-row items-center w-full">
               <motion.div layoutId={`image-${repo.name}-${id}`}>
                 <img
-                  src={PROJECT_IMAGES[repo.id % PROJECT_IMAGES.length]}
+                  src={getProjectImage(repo.name, repo.id)}
                   alt={repo.name}
                   className="h-40 w-full md:h-16 md:w-16 rounded-xl object-cover"
                 />

@@ -9,7 +9,7 @@ export const bioData = {
   github: "https://github.com/Saikat-Bera04",
   twitter: "https://x.com/SaikatBera9933",
   linkedin: "https://www.linkedin.com/in/saikat-bera-a62b68274/",
-  instagram: "https://www.instagram.com/saikatbera.out/",
+  instagram: "https://www.instagram.com/kiannn_art/",
   currentlyBuilding: "campuskart",
   currentlyBuildingUrl: "https://www.campuskart.space/",
   internship: "Girlscript foundation",
@@ -165,3 +165,25 @@ export const certificationsData = [
     imageHint: "data analysis"
   }
 ];
+
+export const PROJECT_IMAGES_MAP: Record<string, string> = {
+  "claimr": "/projects/claimr/cover.png",
+  "aegis": "/projects/aegis/cover.png",
+  "goodmint": "/projects/goodmint/cover.png",
+  "kamadojo": "/projects/kamadojo/cover.png",
+  "kirann": "/projects/kirann/cover.png",
+  "love-calculator": "/projects/love-calculator/cover.png",
+  "mediops": "/projects/mediops/cover.png",
+  "mimic": "/projects/mimic/cover.png",
+  "my-portfolio": "/projects/my-portfolio/cover.png",
+  "oryn-finance": "/projects/oryn-finance/cover.png",
+  "project-pulse": "/projects/project-pulse/cover.png",
+  "qr": "/projects/qr/cover.png",
+  "qr-generator": "/projects/qr-generator/cover.png",
+  "sui-lm": "/projects/sui-lm/cover.png",
+  "tailwind-portfolio": "/projects/tailwind-portfolio/cover.png",
+  "zynvo": "/projects/zynvo/cover.png",
+  "zynvo-landing": "/projects/zynvo-landing/cover.png",
+  "saikat-bera04": "/projects/saikat-bera04/cover.png",
+  "portfolio-v2": "/projects/portfolio-v2/cover.png",
+};
