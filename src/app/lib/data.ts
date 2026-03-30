@@ -84,31 +84,186 @@ export const graphicsData = [
 
 
 export const certificationsData = [
+ 
   {
-    id: "cert-1",
-    title: "Meta Backend Professional",
-    issuer: "Coursera",
+    id: "cert-4",
+    title: "MumbaiHacks 2025 Participation",
+    issuer: "Tech Entrepreneurs Association of Mumbai",
+    date: "2025",
+    url: "/certifications/mumbaihacks-2025.jpg"
+  },
+  {
+    id: "cert-5",
+    title: "Google Student Ambassador Completion",
+    issuer: "Google Gemini & PING NETWORK",
+    date: "2025",
+    url: "/certifications/google-student-ambassador-completion.jpg"
+  },
+  {
+    id: "cert-6",
+    title: "Apertre 3.0 (Evangelist)",
+    issuer: "Resourcio Community",
     date: "2024",
-    link: "https://coursera.org",
-    imageHint: "meta developer"
+    url: "/certifications/apertre-3.0-evangelist.jpg"
   },
   {
-    id: "cert-2",
-    title: "AWS Certified Developer",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    link: "https://aws.amazon.com",
-    imageHint: "cloud computing"
+    id: "cert-7",
+    title: "ON BLOCK Participation",
+    issuer: "KSHITIJ, IIT Kharagpur",
+    date: "2024",
+    url: "/certifications/on-block-kshitij-iitkgp.jpg"
   },
   {
-    id: "cert-3",
-    title: "Google Data Analytics",
-    issuer: "Coursera",
+    id: "cert-8",
+    title: "Internal Hackathon'25 (Smart India Hackathon)",
+    issuer: "Techno Main Salt Lake",
+    date: "2025",
+    url: "/certifications/internal-hackathon-2025-sih.jpg"
+  },
+  {
+    id: "cert-9",
+    title: "DRISHTI: Annual Youth Dialogue 2026",
+    issuer: "Hindu College, University of Delhi",
+    date: "2026",
+    url: "/certifications/drishti-2026-participation.jpg"
+  },
+  {
+    id: "cert-10",
+    title: "Campus Ambassador Internship",
+    issuer: "Resourcio Community",
+    date: "2024",
+    url: "/certifications/campus-ambassador-internship.jpg"
+  },
+  {
+    id: "cert-11",
+    title: "Apertre 2.0 Participation",
+    issuer: "Resourcio Community",
+    date: "2024",
+    url: "/certifications/apertre-2.0-participation.jpg"
+  },
+  {
+    id: "cert-12",
+    title: "Open Source Connect India 2025",
+    issuer: "OSCI'25",
+    date: "2025",
+    url: "/certifications/osci-2025-participation.jpg"
+  },
+  {
+    id: "cert-13",
+    title: "IDEATHON (HACK-TO-HIRE)",
+    issuer: "GDG on Campus FIEM",
+    date: "2025",
+    url: "/certifications/ideathon-hack-to-hire.jpg"
+  },
+  {
+    id: "cert-14",
+    title: "Final Round of Educ-A-Thon 2.0",
+    issuer: "Samarth (Techno Main Salt Lake)",
+    date: "2024",
+    url: "/certifications/educ-a-thon-2.0-appreciation.jpg"
+  },
+  {
+    id: "cert-15",
+    title: "Offline Finals of Educ-A-Thon 2024",
+    issuer: "Techno Main Salt Lake",
+    date: "2024",
+    url: "/certifications/educ-a-thon-2024-finals.jpg"
+  },
+  {
+    id: "cert-16",
+    title: "Educ-A-Thon Participation",
+    issuer: "SAMARTH (Techno Main Salt Lake)",
+    date: "2024",
+    url: "/certifications/educ-a-thon-participation.jpg"
+  },
+  {
+    id: "cert-17",
+    title: "geekHacks 1.0 Participation",
+    issuer: "Techno Main Salt Lake",
+    date: "2024",
+    url: "/certifications/geekhacks-1.0-participation.jpg"
+  },
+  {
+    id: "cert-18",
+    title: "Kaggle Community Member Badge",
+    issuer: "Kaggle",
+    date: "2024",
+    url: "/certifications/kaggle-community-badge.jpg"
+  },
+  {
+    id: "cert-19",
+    title: "Summer Internship Offer Letter",
+    issuer: "Pledge A Smile Foundation",
+    date: "2024",
+    url: "/certifications/pledge-a-smile-internship-offer.jpg"
+  },
+  {
+    id: "cert-20",
+    title: "Cricket in Exertion 2024",
+    issuer: "tecnotkarsh (Techno Main Salt Lake)",
+    date: "2024",
+    url: "/certifications/cricket-exertion-2024.jpg"
+  },
+  {
+    id: "cert-21",
+    title: "Football in Exertion 2024",
+    issuer: "tecnotkarsh (Techno Main Salt Lake)",
+    date: "2024",
+    url: "/certifications/football-exertion-2024.jpg"
+  },
+  {
+    id: "cert-22",
+    title: "Graffiti 2025 (Annual Magazine)",
+    issuer: "Techno Main Salt Lake",
+    date: "2025",
+    url: "/certifications/graffiti-2025-magazine.jpg"
+  },
+  {
+    id: "cert-23",
+    title: "Internal Hackathon'25 (Smart India Hackathon) - Secondary",
+    issuer: "Techno Main Salt Lake",
+    date: "2025",
+    url: "/certifications/internal-hackathon-2025-sih-alt.jpg"
+  },
+  {
+    id: "cert-24",
+    title: "DevTown Appreciation",
+    issuer: "DevTown",
+    date: "2024",
+    url: "/certifications/devtown-appreciation.jpg"
+  },
+  {
+    id: "cert-25",
+    title: "Educ-A-Thon Participation (Alt)",
+    issuer: "SAMARTH",
+    date: "2024",
+    url: "/certifications/educ-a-thon-participation-alt.jpg"
+  },
+  {
+    id: "cert-26",
+    title: "Hack Your Way - Envisage '25",
+    issuer: "Envisage",
+    date: "2025",
+    url: "/certifications/hack-your-way-envisage-25.jpg"
+  },
+  {
+    id: "cert-27",
+    title: "Internship Annexure",
+    issuer: "Pledge A Smile Foundation",
+    date: "2024",
+    url: "/certifications/pledge-a-smile-internship-annexure.jpg"
+  },
+  {
+    id: "cert-28",
+    title: "Tailwind CSS Bootcamp",
+    issuer: "DevTown",
     date: "2023",
-    link: "https://coursera.org",
-    imageHint: "data analysis"
+    url: "/certifications/tailwind-css-devtown.jpg"
   }
 ];
+
+
+
 
 export const PROJECT_IMAGES_MAP: Record<string, string> = {
   "claimr": "/projects/claimr/cover.png",

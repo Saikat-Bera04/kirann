@@ -26,17 +26,16 @@ export default function CertificationsPage() {
         {certificationsData.map((cert) => (
           <a 
             key={cert.id} 
-            href={cert.link} 
+            href={(cert as any).link || cert.url} 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative rounded-[2.5rem] overflow-hidden border border-primary/20 aspect-[4/3] bg-card/20 backdrop-blur-sm shadow-xl transition-all hover:border-primary/50"
           >
             <Image 
-              src={`https://picsum.photos/seed/${cert.id}/800/600`} 
+              src={cert.url || `https://picsum.photos/seed/${cert.id}/800/600`} 
               alt={cert.title} 
               fill 
               className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-100" 
-              data-ai-hint={cert.imageHint}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
             
