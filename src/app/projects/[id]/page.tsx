@@ -10,7 +10,7 @@ import { Github, ExternalLink, ArrowLeft, Terminal, Home, Loader2 } from "lucide
 
 const PROJECT_IMAGES = [
   "/_ (37).jpeg",
-  "/_ (41).jpeg",
+  "/_ (38).jpeg",
   "https://picsum.photos/seed/rust-lang/600/400",
   "https://picsum.photos/seed/web3-tech/600/400",
   "https://picsum.photos/seed/ai-data/600/400",

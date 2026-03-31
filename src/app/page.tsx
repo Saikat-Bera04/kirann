@@ -40,9 +40,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen overflow-hidden relative flex items-center justify-center py-4">
-      <div className="container mx-auto px-4 max-w-7xl relative z-10 h-full max-h-[900px]">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-full">
+    <div className="min-h-screen md:h-screen md:overflow-hidden relative flex items-center justify-center py-8 md:py-4">
+      <div className="container mx-auto px-4 max-w-7xl relative z-10 h-full md:max-h-[900px]">
+        <div className="flex flex-col md:grid md:grid-cols-12 gap-6 md:gap-4 h-full">
           
           {/* Column 1: Profile & Cards */}
           <div className="md:col-span-4 flex flex-col gap-4 h-full">
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
 
             {/* Graphics Card Link */}
-            <Link href="/graphics" className="block relative group overflow-hidden rounded-[2rem] border border-primary/20 flex-1 min-h-0 bg-card/20 backdrop-blur-sm">
+            <Link href="/graphics" className="block relative group overflow-hidden rounded-[2rem] border border-primary/20 flex-1 min-h-[160px] md:min-h-0 bg-card/20 backdrop-blur-sm">
               <Image src="/1440P Wallpaper Messi and Jesus.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-4 left-4 z-10">
@@ -119,7 +119,7 @@ export default function Home() {
             </Link>
 
             {/* Certifications Card Link */}
-            <Link href="/certifications" className="block relative group overflow-hidden rounded-[2rem] border border-primary/20 flex-1 min-h-0 bg-card/20 backdrop-blur-sm">
+            <Link href="/certifications" className="block relative group overflow-hidden rounded-[2rem] border border-primary/20 flex-1 min-h-[160px] md:min-h-0 bg-card/20 backdrop-blur-sm">
               <Image src="/_ (37).jpeg" alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-4 left-4 z-10">
@@ -132,8 +132,8 @@ export default function Home() {
           </div>
 
           {/* Column 2: Tech Stack */}
-          <div className="md:col-span-4 h-full overflow-hidden">
-            <div className="p-5 h-full space-y-4 border border-primary/10 rounded-[2rem] bg-card/20 backdrop-blur-sm flex flex-col">
+          <div className="md:col-span-4 h-full md:overflow-hidden">
+            <div className="p-5 h-full space-y-4 border border-primary/10 rounded-[2rem] bg-card/20 backdrop-blur-sm flex flex-col min-h-[400px]">
               <div className="flex items-center justify-between bg-white/5 backdrop-blur-lg p-4 rounded-2xl border border-primary/20 shadow-lg flex-shrink-0">
                 <div>
                   <h2 className="text-xl font-black italic tracking-tighter text-white uppercase leading-none" style={{ fontFamily: "'Open Sans', sans-serif" }}>TECH STACK</h2>
@@ -168,8 +168,8 @@ export default function Home() {
           </div>
 
           {/* Column 3: Projects Vertical Navigation */}
-          <div className="md:col-span-4 h-full">
-            <Link href="/projects" className="block h-full group">
+          <div className="md:col-span-4 h-full mt-2 md:mt-0">
+            <Link href="/projects" className="block h-full min-h-[300px] md:min-h-0 group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all rounded-[2rem]">
                 <Image 
                   src="/Untitled design (2).png" 
