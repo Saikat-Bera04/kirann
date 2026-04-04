@@ -97,6 +97,8 @@ export const graphicsData = [
   { id: "g32", title: "IIT Dairy 3", url: "/graphics/iit dairy/3.png" },
   { id: "g33", title: "IIT Dairy 4", url: "/graphics/iit dairy/4.png" },
   { id: "g34", title: "IIT Dairy 5", url: "/graphics/iit dairy/5.png" },
+  { id: "g34", title: "kharcomedyclub", url: "/graphics//solo show.png" },
+  { id: "g34", title: "kharcomedyclub", url: "/graphics/gala.png" },
 ];
 
 
