@@ -64,7 +64,7 @@ export interface Project {
 
 export const graphicsData = [
   { id: "g1", title: "Beyond Campus", url: "/graphics/Beyond Campus, Into the Future (1) (1).png" },
-  { id: "g2", title: "Personal Branding", url: "/graphics/Saikat Logo.png" },
+ 
   { id: "g3", title: "Fashion Poster", url: "/graphics/Brown and White Modern New Fashion Poster (3).png" },
   { id: "g4", title: "Zync It", url: "/graphics/Zync It or Risk it. (4).png" },
   { id: "g5", title: "CampusKart", url: "/graphics/campuskart promotion.png" },
@@ -80,6 +80,23 @@ export const graphicsData = [
   { id: "g15", title: "Abstract 37", url: "/_ (37).jpeg" },
   { id: "g16", title: "Abstract 38", url: "/_ (38).jpeg" },
   { id: "g17", title: "Abstract 40", url: "/_ (40).jpeg" },
+  { id: "g18", title: "Music Festival Poster", url: "/graphics/Beige Pink Retro Music Song Concert Fest Poster.png" },
+  { id: "g19", title: "Developer Graphic", url: "/graphics/Developer (1).png" },
+  { id: "g20", title: "Summer Sale", url: "/graphics/Lemon Yellow Fresh Summer Sale Insta Post.png" },
+  { id: "g21", title: "CampusKart Card", url: "/graphics/campuskart card.png" },
+  { id: "g22", title: "Zynvo Carousel 1", url: "/graphics/zynvo Carousel/1.png" },
+  { id: "g23", title: "Zynvo Carousel 2", url: "/graphics/zynvo Carousel/2.png" },
+  { id: "g24", title: "Zynvo Carousel 3", url: "/graphics/zynvo Carousel/3.png" },
+  { id: "g25", title: "Zynvo Carousel 4", url: "/graphics/zynvo Carousel/4.png" },
+  { id: "g26", title: "Zynvo Carousel 5", url: "/graphics/zynvo Carousel/5.png" },
+  { id: "g27", title: "Zynvo Carousel 6", url: "/graphics/zynvo Carousel/6.png" },
+  { id: "g28", title: "Zynvo Carousel 7", url: "/graphics/zynvo Carousel/7.png" },
+
+  { id: "g30", title: "IIT Dairy 1", url: "/graphics/iit dairy/1.png" },
+  { id: "g31", title: "IIT Dairy 2", url: "/graphics/iit dairy/2.png" },
+  { id: "g32", title: "IIT Dairy 3", url: "/graphics/iit dairy/3.png" },
+  { id: "g33", title: "IIT Dairy 4", url: "/graphics/iit dairy/4.png" },
+  { id: "g34", title: "IIT Dairy 5", url: "/graphics/iit dairy/5.png" },
 ];
 
 
