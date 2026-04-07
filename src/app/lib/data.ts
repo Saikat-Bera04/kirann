@@ -10,7 +10,7 @@ export const bioData = {
   twitter: "https://x.com/SaikatBera9933",
   linkedin: "https://www.linkedin.com/in/saikat-bera-a62b68274/",
   instagram: "https://www.instagram.com/kirannn_art/",
-  currentlyBuilding: "campuskart",
+  currentlyBuilding: "campuskart.space",
   currentlyBuildingUrl: "https://www.campuskart.space/",
   internship: "Girlscript foundation",
   internshipUrl: "https://www.girlscript.org/",
