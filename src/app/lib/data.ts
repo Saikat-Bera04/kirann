@@ -44,7 +44,7 @@ export const skillsCategories = [
   },
   {
     name: "Design & Creative Tools",
-    skills: ["Figma", "Framer", "Adobe Illustrator", "Blender", "Canva"]
+    skills: ["Figma", "Framer", "Adobe Illustrator", "Canva"]
   }
 ];
 
