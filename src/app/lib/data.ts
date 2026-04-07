@@ -36,7 +36,7 @@ export const skillsCategories = [
   },
   {
     name: "Web3 Development",
-    skills: ["Solidity", "Hardhat", "Web3.js", "Remix"]
+    skills: ["Solidity", "Hardhat", "Web3.js", "Remix", "Polygon", "Ethereum", "IPFS", "Chainlink"]
   },
   {
     name: "AI & LLM Engineering",
