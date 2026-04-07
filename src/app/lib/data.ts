@@ -285,6 +285,13 @@ export const certificationsData = [
     issuer: "Techno Main Salt Lake",
     date: "2025",
     url: "/certifications/f2f.jpg"
+  },
+  {
+    id: "cert-30",
+    title: "Diversion",
+    issuer: "IEM",
+    date: "2026",
+    url: "/certifications/diversion.jpg"
   }
 ];
 
