@@ -278,6 +278,13 @@ export const certificationsData = [
     issuer: "DevTown",
     date: "2023",
     url: "/certifications/tailwind-css-devtown.jpg"
+  },
+  {
+    id: "cert-29",
+    title: "Fear to Flow winner",
+    issuer: "Techno Main Salt Lake",
+    date: "2025",
+    url: "/certifications/f2f.jpg"
   }
 ];
 
