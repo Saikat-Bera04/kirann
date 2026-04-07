@@ -76,7 +76,7 @@ export const graphicsData = [
   { id: "g11", title: "Messi & Jesus", url: "/1440P Wallpaper Messi and Jesus.jpeg" },
   { id: "g12", title: "Creative Design", url: "/Untitled design (2).png" },
   { id: "g13", title: "Atmospheric", url: "/sp.jpeg" },
-  { id: "g14", title: "Profile Graphic", url: "/B (1).png" },
+
   { id: "g15", title: "Abstract 37", url: "/_ (37).jpeg" },
   { id: "g16", title: "Abstract 38", url: "/_ (38).jpeg" },
   { id: "g17", title: "Abstract 40", url: "/_ (40).jpeg" },
