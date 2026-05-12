@@ -292,6 +292,13 @@ export const certificationsData = [
     issuer: "IEM",
     date: "2026",
     url: "/certifications/diversion.jpg"
+  },
+  {
+    id: "cert-33",
+    title: "Vibe Build",
+    issuer: "IIT KHARAGPUR",
+    date: "2026",
+    url: "/certifications/vibebuild.jpg"
   }
 ];
 
