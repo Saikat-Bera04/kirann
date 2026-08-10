@@ -10,9 +10,16 @@ export default function ProjectsPage() {
   const [filter, setFilter] = useState("");
   const [repos, setRepos] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 25;
+
+  // Reset to first page when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filter]);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/Saikat-Bera04/repos?sort=updated')
+    fetch('https://api.github.com/users/Saikat-Bera04/repos?sort=updated&per_page=100')
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -30,6 +37,12 @@ export default function ProjectsPage() {
     repo.name.toLowerCase().includes(filter.toLowerCase()) ||
     (repo.description && repo.description.toLowerCase().includes(filter.toLowerCase())) ||
     (repo.topics && repo.topics.some((topic: string) => topic.toLowerCase().includes(filter.toLowerCase())))
+  );
+
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
+  const paginatedProjects = filteredProjects.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
   );
 
   return (
@@ -66,7 +79,35 @@ export default function ProjectsPage() {
         </div>
       ) : (
         <>
-          <ExpandableProjects repos={filteredProjects} />
+          <ExpandableProjects repos={paginatedProjects} />
+
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-4 mt-12">
+              <button 
+                onClick={() => {
+                  setCurrentPage(p => Math.max(1, p - 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                disabled={currentPage === 1}
+                className="px-6 py-2 rounded-full font-bold uppercase tracking-widest text-xs border border-primary/20 hover:bg-primary hover:text-primary-foreground disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-foreground transition-colors"
+              >
+                Previous
+              </button>
+              <span className="text-sm font-bold text-muted-foreground">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button 
+                onClick={() => {
+                  setCurrentPage(p => Math.min(totalPages, p + 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                disabled={currentPage === totalPages}
+                className="px-6 py-2 rounded-full font-bold uppercase tracking-widest text-xs border border-primary/20 hover:bg-primary hover:text-primary-foreground disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-foreground transition-colors"
+              >
+                Next
+              </button>
+            </div>
+          )}
 
           {filteredProjects.length === 0 && (
             <div className="text-center py-20 bg-card/20 rounded-3xl border border-dashed border-primary/20">
