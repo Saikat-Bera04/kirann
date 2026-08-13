@@ -50,7 +50,7 @@ export default function Home() {
             <div className="glass-card p-5 space-y-4 border-primary/20 flex flex-col justify-between flex-shrink-0">
               <div className="flex items-center gap-3">
                 <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-primary/30 flex-shrink-0">
-                  <Image src="/B (1).png" alt={bioData.name} fill className="object-cover" />
+                  <Image src="/graphics/saikat-logo.png" alt={bioData.name} fill className="object-cover" />
                 </div>
                 <div>
                   <h1 className="text-lg font-bold tracking-tight text-white uppercase leading-none" style={{ fontFamily: "'Poppins', sans-serif" }}>{bioData.name}</h1>
@@ -108,7 +108,7 @@ export default function Home() {
 
             {/* Graphics Card Link */}
             <Link href="/graphics" className="block relative group overflow-hidden rounded-[2rem] border border-primary/20 flex-1 min-h-[160px] md:min-h-0 bg-card/20 backdrop-blur-sm">
-              <Image src="/1440P Wallpaper Messi and Jesus.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src="/graphics/messi-and-jesus.jpeg" alt="Graphics" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-4 left-4 z-10">
                 <h2 className="text-xl font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>GRAPHICS</h2>
@@ -120,7 +120,7 @@ export default function Home() {
 
             {/* Certifications Card Link */}
             <Link href="/certifications" className="block relative group overflow-hidden rounded-[2rem] border border-primary/20 flex-1 min-h-[160px] md:min-h-0 bg-card/20 backdrop-blur-sm">
-              <Image src="/_ (37).jpeg" alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image src="/graphics/abstract-37.jpeg" alt="Certifications" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors" />
               <div className="absolute bottom-4 left-4 z-10">
                 <h2 className="text-lg font-black tracking-tighter text-white opacity-90 group-hover:opacity-100 group-hover:neon-glow-primary transition-all duration-300 uppercase" style={{ fontFamily: "'Roboto', sans-serif" }}>CERTIFICATIONS</h2>
@@ -172,7 +172,7 @@ export default function Home() {
             <Link href="/projects" className="block h-full min-h-[300px] md:min-h-0 group">
               <div className="glass-card h-full relative overflow-hidden flex flex-col justify-between group border-primary/10 hover:border-primary/40 transition-all rounded-[2rem]">
                 <Image 
-                  src="/Untitled design (2).png" 
+                  src="/graphics/developer-graphic.png" 
                   alt="Projects" 
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700" 
